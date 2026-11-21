@@ -1858,29 +1858,38 @@
           videoSrc: '/public/assets/ig_reel_DZDbZOoyTf6.mp4',
           posterSrc: '/public/assets/ig_reel_DZDbZOoyTf6.jpg',
           reelUrl: 'https://www.instagram.com/reel/DZDbZOoyTf6/?utm_source=ig_web_copy_link&avpt=MzRlODBiNWFlZA==',
+          platformLabel: 'Instagram',
           quote: 'Is taking GLP-1 cheating? Debunking the 3 biggest myths around metabolic health, protein-first muscle preservation, and building sustainable habits.',
           accent: '#8B5CF6'
         },
         {
           id: 'test-dev',
-          handle: '@dev.gotmoney',
-          name: 'Dev',
-          country: 'India',
-          flag: '🇮🇳',
-          followers: '81K Followers',
-          duration: 54,
-          quote: 'Went from 1.2K to 47K+ in 6 months and now over 81K. Zero guesswork—they built the entire content engine.',
+          handle: '@sworntranslatorwarsaw',
+          name: 'Sworn Translator Warsaw',
+          country: 'Poland',
+          flag: '🇵🇱',
+          followers: 'Certified Translation Agency',
+          duration: 39,
+          videoSrc: '/public/assets/ig_reel_DcF-5gTA5lM.mp4',
+          posterSrc: '/public/assets/ig_reel_DcF-5gTA5lM.jpg',
+          reelUrl: 'https://www.instagram.com/reel/DcF-5gTA5lM/?utm_source=ig_web_copy_link&gwpx=MzRlODBiNWFlZA==&avpt=MzRlODBiNWFlZA==',
+          platformLabel: 'Instagram',
+          quote: 'Need an official document translated in Poland? 100% legally recognized translations in 58+ languages — free online quote in 3 simple steps.',
           accent: '#8B5CF6'
         },
         {
           id: 'test-vicky',
-          handle: '@vicky.lifestyle',
-          name: 'Vicky Travels',
-          country: 'United States',
-          flag: '🇺🇸',
-          followers: '23K Followers',
-          duration: 42,
-          quote: 'I just send raw footage and their team handles hooks, sound design, captions, and multi-platform formatting.',
+          handle: '@mohammadinpoland',
+          name: 'Mohammad in Poland',
+          country: 'Poland',
+          flag: '🇵🇱',
+          followers: '34K Followers • Business Consultant',
+          duration: 127,
+          videoSrc: '/public/assets/fb_reel_1F1KtgE1Yv.mp4',
+          posterSrc: '/public/assets/fb_reel_1F1KtgE1Yv.jpg',
+          reelUrl: 'https://www.facebook.com/share/v/1F1KtgE1Yv/',
+          platformLabel: 'Facebook',
+          quote: '🇵🇱 Sp. z o.o. in Poland: Limited Liability, Unlimited Responsibilities? TRC residence links, ZUS obligations, tax compliance & liquidation strategy.',
           accent: '#6D28D9'
         }
       ];
@@ -2184,7 +2193,7 @@
                   <div class="flex items-center gap-1.5 shrink-0">
                     ${t.reelUrl
                       ? `<a href="${t.reelUrl}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();" class="px-2 py-0.5 rounded bg-black/75 hover:bg-black/95 hover:border-nebula-400/60 border border-white/15 text-white font-semibold transition inline-flex items-center gap-1 whitespace-nowrap shrink-0">
-                           <span>Instagram</span>
+                           <span>${t.platformLabel || 'Instagram'}</span>
                            <span>↗</span>
                          </a>`
                       : ''
@@ -2202,7 +2211,7 @@
                 <!-- Bottom Controls matching 0:00 / 0:00 & 1x + Hover Scrubber -->
                 <div class="bg-black/80 backdrop-blur-md rounded-lg px-2.5 py-1.5 flex items-center justify-between text-[11px] border border-white/10 relative overflow-hidden">
                   <div class="hover-scrubber-bar absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-nebula-400 to-fuchsia-400"></div>
-                  <span class="player-time font-mono text-mist-200">0:00 / 0:${t.duration}</span>
+                  <span class="player-time font-mono text-mist-200">0:00 / ${formatSec(t.duration)}</span>
                   <button type="button" class="player-speed-btn px-1.5 py-0.5 rounded bg-white/10 hover:bg-white/20 text-white font-semibold transition">1×</button>
                 </div>
               </div>
@@ -2214,11 +2223,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- Summary / Quote Placed Cleanly Below the 9:16 Video -->
-            <p class="mt-3 text-xs text-mist-300 leading-relaxed bg-white/[0.02] p-2.5 rounded-xl border border-white/[0.06]">
-              "${t.quote}"
-            </p>
           </div>
         `).join('');
       }
@@ -2303,7 +2307,6 @@
                 <span class="text-[10px] text-nebula-300 font-mono">${v.metrics}</span>
               </div>
               <div class="text-xs sm:text-sm font-bold text-white leading-snug group-hover:text-nebula-200 transition-colors">${v.title}</div>
-              <p class="text-[11px] sm:text-xs text-mist-400 leading-relaxed">${v.strategyProof}</p>
             </div>
           </div>
           `;
@@ -2359,11 +2362,33 @@
           if (nativeVid) {
             try { nativeVid.pause(); } catch (err) {}
           }
-          if (overlayEl) overlayEl.classList.remove(' opacity-0');
-          if (overlayEl) overlayEl.style.opacity = '1';
+          if (overlayEl) {
+            overlayEl.classList.remove('opacity-0');
+            overlayEl.style.opacity = '1';
+          }
           if (pillEl) pillEl.classList.add('hidden');
           playClickBeep(400);
         } else {
+          // Pause any other playing Reel card first
+          Object.keys(activePlayers).forEach(otherId => {
+            if (otherId !== pid && activePlayers[otherId] && activePlayers[otherId].playing) {
+              clearInterval(activePlayers[otherId].timer);
+              activePlayers[otherId].playing = false;
+              const otherCard = document.querySelector(`[data-player-id="${otherId}"]`);
+              if (otherCard) {
+                const otherVid = otherCard.querySelector('.testimonial-native-video');
+                const otherOverlay = otherCard.querySelector('.player-overlay');
+                const otherPill = otherCard.querySelector('.player-status-pill');
+                if (otherVid) { try { otherVid.pause(); } catch (err) {} }
+                if (otherOverlay) {
+                  otherOverlay.classList.remove('opacity-0');
+                  otherOverlay.style.opacity = '1';
+                }
+                if (otherPill) otherPill.classList.add('hidden');
+              }
+            }
+          });
+
           st.playing = true;
           if (overlayEl) overlayEl.style.opacity = '0';
           if (pillEl) pillEl.classList.remove('hidden');
@@ -2379,7 +2404,7 @@
               if (timeEl) timeEl.textContent = `${formatSec(cur)} / ${formatSec(tot)}`;
             } else {
               st.sec = (st.sec + 1) % (duration + 1);
-              if (timeEl) timeEl.textContent = `${formatSec(st.sec)} / 0:${duration}`;
+              if (timeEl) timeEl.textContent = `${formatSec(st.sec)} / ${formatSec(duration)}`;
             }
           }, 500);
         }
