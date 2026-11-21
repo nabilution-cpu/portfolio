@@ -1108,8 +1108,8 @@
           </div>
         </div>
 
-        <!-- 3-Column Video Testimonial Grid (@jade.got.curious, @dev.gotmoney, @vicky.lifestyle) -->
-        <div id="testimonialGrid" class="mt-8 px-4 sm:px-10 md:px-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+        <!-- 3-Column Vertical 9:16 Short-Form Reel Showcase Grid -->
+        <div id="testimonialGrid" class="mt-8 px-4 sm:px-8 max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 items-stretch">
           <!-- Dynamically populated by JS -->
         </div>
       </div>
@@ -1763,14 +1763,17 @@
       const testimonialsData = [
         {
           id: 'test-jade',
-          handle: '@jade.got.curious',
-          name: 'Jade Sheng',
+          handle: '@goalphahealthmb',
+          name: 'Alpha Health Myrtle Beach',
           country: 'United States',
           flag: '🇺🇸',
-          followers: '103K Followers',
-          duration: 48,
-          quote: 'Every reel lands with razor-sharp pacing and retention hooks that turned viewers into inbound coaching leads.',
-          accent: '#F43F5E'
+          followers: 'Health & Wellness Clinic',
+          duration: 31,
+          videoSrc: '/public/assets/ig_reel_DZDbZOoyTf6.mp4',
+          posterSrc: '/public/assets/ig_reel_DZDbZOoyTf6.jpg',
+          reelUrl: 'https://www.instagram.com/reel/DZDbZOoyTf6/?utm_source=ig_web_copy_link&avpt=MzRlODBiNWFlZA==',
+          quote: 'Is taking GLP-1 cheating? Debunking the 3 biggest myths around metabolic health, protein-first muscle preservation, and building sustainable habits.',
+          accent: '#8B5CF6'
         },
         {
           id: 'test-dev',
@@ -1800,13 +1803,16 @@
       const portfolioVideosData = [
         {
           id: 'port-1',
-          title: '3-Second Hook & Buyer Positioning',
-          client: '@jade.got.curious • 103K',
+          youtubeId: 'uv-UynNRN1M',
+          youtubeUrl: 'https://youtu.be/uv-UynNRN1M?si=OJwa0I2wy3Lgux3k',
+          thumbnailUrl: 'https://i.ytimg.com/vi/uv-UynNRN1M/hqdefault.jpg',
+          title: '🇵🇱 Business in Poland: Tax Compliance, AI Monitoring & Unpaid ZUS — What Should You Know?',
+          client: '@Mohammad_in_Poland • Mohammad in Poland',
           category: 'retention',
-          metrics: '84% 3s Hold • 14 Qualified Calls',
-          strategyProof: 'Changed generic intro to a buyer-pain hook & direct DM CTA → 84% 3-sec hold and 14 discovery calls booked.',
+          metrics: 'youtu.be/uv-UynNRN1M • Talking Head',
+          strategyProof: 'High-retention talking head breakdown turning complex Polish tax compliance, AI monitoring, and ZUS rules into clear buyer authority for business owners.',
           duration: 45,
-          hookText: 'STOP POSTING WITHOUT THIS SYSTEM',
+          hookText: 'TAX COMPLIANCE & AI MONITORING IN POLAND',
           accent: '#8B5CF6'
         },
         {
@@ -1822,13 +1828,16 @@
         },
         {
           id: 'port-3',
-          title: 'High-Ticket Offer Funnel & Lead Magnet',
-          client: 'B2B Coach & Consultant',
+          youtubeId: 'aCfwzUsSiQ0',
+          youtubeUrl: 'https://youtu.be/aCfwzUsSiQ0?si=hJ8Dp01Kusno-sko',
+          thumbnailUrl: 'https://i.ytimg.com/vi/aCfwzUsSiQ0/hqdefault.jpg',
+          title: 'My 360° Local SEO Process: SEO, AEO & GEO | Muhaiminul Islam Sajib',
+          client: '@MuhaiminulIslamSajib • Muhaiminul Islam Sajib',
           category: 'b2b',
-          metrics: '38 Strategy Calls Booked',
-          strategyProof: 'Replaced "link in bio" with a specific keyword call-to-action & authority framing → 38 qualified calls in 60 days.',
+          metrics: 'youtu.be/aCfwzUsSiQ0 • B2B Funnel',
+          strategyProof: 'Structured 360° Local SEO, AEO, and GEO methodology breakdown designed to demonstrate B2B search authority and convert inbound agency prospects.',
           duration: 38,
-          hookText: 'WHY YOUR REELS GET VIEWS NOT SALES',
+          hookText: '360° LOCAL SEO PROCESS: SEO, AEO & GEO',
           accent: '#7C3AED'
         },
         {
@@ -1844,13 +1853,16 @@
         },
         {
           id: 'port-5',
-          title: 'Objection-Handling Authority Reel',
-          client: '@vicky.lifestyle • 23K',
+          youtubeId: 'VKUCvrAdgCQ',
+          youtubeUrl: 'https://youtu.be/VKUCvrAdgCQ?si=qH5o7525AwXSniLI',
+          thumbnailUrl: 'https://i.ytimg.com/vi/VKUCvrAdgCQ/hqdefault.jpg',
+          title: 'Social Security Breakeven Age: Should You Claim at 62, 67, or 70?',
+          client: '@MedicareonVideo • Medicare Specialist',
           category: 'retention',
-          metrics: '+34,000 Audience Growth',
-          strategyProof: 'Built content angles around top 5 sales call objections → prospects arrived pre-sold before getting on the call.',
+          metrics: 'youtu.be/VKUCvrAdgCQ • Talking Head',
+          strategyProof: 'Structured retirement & Social Security breakeven analysis paced with clear visual comparisons that answer high-intent client questions before the consultation.',
           duration: 49,
-          hookText: 'THE 5-STEP POSITIONING BLUEPRINT',
+          hookText: 'CLAIM AT 62, 67, OR 70? BREAKEVEN MATH',
           accent: '#F43F5E'
         },
         {
@@ -2049,10 +2061,10 @@
       function renderTestimonials() {
         const grid = document.getElementById('testimonialGrid');
         grid.innerHTML = testimonialsData.map((t, idx) => `
-          <div class="interactive-media-card reveal-on-scroll is-inview xtract-bento-card p-4 flex flex-col justify-between hover:border-nebula-500/45" style="--stagger:${idx}">
-            <!-- Creator Header (Responsive & Overflow-Safe for Mobile, Tablet & Desktop) -->
-            <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5">
-              <div class="flex items-center gap-2.5 min-w-0 flex-1">
+          <div class="interactive-media-card reveal-on-scroll is-inview xtract-bento-card p-4 w-full max-w-[320px] mx-auto flex flex-col justify-between hover:border-nebula-500/45" style="--stagger:${idx}">
+            <!-- Creator Header (Full-Width Legible Handle & Subtitle + Pill Badge) -->
+            <div class="flex flex-col gap-2.5 mb-3.5">
+              <div class="flex items-center gap-2.5 min-w-0">
                 <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-white text-xs sm:text-sm shrink-0 shadow-md transition-transform duration-300 group-hover:scale-105" style="background:${t.accent}">
                   ${t.name.charAt(0)}
                 </div>
@@ -2064,26 +2076,40 @@
                   <div class="text-[11px] text-mist-400 truncate">${t.name} • ${t.flag} ${t.country}</div>
                 </div>
               </div>
-              <span class="px-2.5 py-1 rounded-full bg-nebula-500/15 border border-nebula-500/35 text-[11px] font-semibold text-nebula-300 whitespace-nowrap shrink-0">
-                ${t.followers}
-              </span>
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-0.5 rounded-full bg-nebula-500/15 border border-nebula-500/35 text-[10px] font-semibold text-nebula-300 whitespace-nowrap">
+                  ${t.followers}
+                </span>
+                <span class="text-[10px] font-mono text-mist-400 uppercase tracking-wider">9:16 Reel</span>
+              </div>
             </div>
 
-            <!-- Compact 4:3 Video Preview Box with Hover Scale & Muted Waveform Preview -->
-            <div class="relative aspect-[4/3] w-full rounded-xl bg-[#05040A] border border-white/[0.08] overflow-hidden cursor-pointer group" data-player-id="${t.id}" data-duration="${t.duration}">
+            <!-- Vertical 9:16 Short-Form Reel Preview Box -->
+            <div class="relative aspect-[9/16] w-full rounded-xl bg-[#05040A] border border-white/[0.08] overflow-hidden cursor-pointer group" data-player-id="${t.id}" data-duration="${t.duration}">
               <div class="media-stage-zoom absolute inset-0" style="background: radial-gradient(circle at 50% 42%, ${t.accent}48, rgba(11,10,16,0.2) 55%, transparent 78%);"></div>
-              <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 32px 32px;"></div>
+              ${t.videoSrc
+                ? `<video src="${t.videoSrc}" poster="${t.posterSrc || ''}" playsinline loop preload="metadata" class="testimonial-native-video media-stage-zoom absolute inset-0 w-full h-full object-cover opacity-95 group-hover:opacity-100 transition-all duration-300"></video>
+                   <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/55 pointer-events-none"></div>`
+                : `<div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 32px 32px;"></div>`
+              }
               <div class="absolute inset-0 flex flex-col justify-between p-3 z-10">
-                <div class="flex items-center justify-between text-[10px] text-mist-300">
-                  <span class="px-2 py-0.5 rounded bg-black/70 border border-white/10 font-medium">Video Testimonial</span>
-                  <div class="flex items-center gap-1.5">
-                    <div class="hover-preview-eq flex items-end gap-0.5 px-1.5 py-0.5 rounded bg-black/65 border border-white/10" title="Muted Preview Active">
+                <div class="flex items-center justify-between gap-1.5 text-[10px] text-mist-300">
+                  <span class="px-2 py-0.5 rounded bg-black/70 border border-white/10 font-medium whitespace-nowrap shrink-0">Short-Form Reel</span>
+                  <div class="flex items-center gap-1.5 shrink-0">
+                    ${t.reelUrl
+                      ? `<a href="${t.reelUrl}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();" class="px-2 py-0.5 rounded bg-black/75 hover:bg-black/95 hover:border-nebula-400/60 border border-white/15 text-white font-semibold transition inline-flex items-center gap-1 whitespace-nowrap shrink-0">
+                           <span>Instagram</span>
+                           <span>↗</span>
+                         </a>`
+                      : ''
+                    }
+                    <div class="hover-preview-eq flex items-end gap-0.5 px-1.5 py-0.5 rounded bg-black/65 border border-white/10 shrink-0" title="Muted Preview Active">
                       <span class="eq-bar eq-bar-1"></span>
                       <span class="eq-bar eq-bar-2"></span>
                       <span class="eq-bar eq-bar-3"></span>
                       <span class="eq-bar eq-bar-4"></span>
                     </div>
-                    <span class="player-status-pill px-2 py-0.5 rounded bg-nebula-500/20 text-nebula-200 font-semibold hidden">● PLAYING</span>
+                    <span class="player-status-pill px-2 py-0.5 rounded bg-nebula-500/20 text-nebula-200 font-semibold whitespace-nowrap shrink-0 hidden">● PLAYING</span>
                   </div>
                 </div>
 
@@ -2103,7 +2129,7 @@
               </div>
             </div>
 
-            <!-- Quote Placed Cleanly Below the 4:3 Video -->
+            <!-- Summary / Quote Placed Cleanly Below the 9:16 Video -->
             <p class="mt-3 text-xs text-mist-300 leading-relaxed bg-white/[0.02] p-2.5 rounded-xl border border-white/[0.06]">
               "${t.quote}"
             </p>
@@ -2115,11 +2141,39 @@
       function renderPortfolio(filter = 'all') {
         const grid = document.getElementById('portfolioGrid');
         const filtered = filter === 'all' ? portfolioVideosData : portfolioVideosData.filter(v => v.category === filter);
-        grid.innerHTML = filtered.map((v, idx) => `
-          <div class="interactive-media-card reveal-on-scroll is-inview xtract-bento-card p-2.5 sm:p-3.5 flex flex-col justify-between hover:border-nebula-500/45 group" style="--stagger:${idx}">
-            <!-- Compact 4:3 Video Thumbnail Player with Smooth Zoom & Muted Preview Indicator -->
+        grid.innerHTML = filtered.map((v, idx) => {
+          const isYoutube = Boolean(v.youtubeId);
+          const safeTitleAttr = (v.title || '').replace(/"/g, '&quot;');
+          const playerMarkup = isYoutube
+            ? `
+            <div class="relative aspect-[4/3] w-full rounded-xl bg-[#05040A] border border-white/[0.08] overflow-hidden cursor-pointer mx-auto" data-youtube-id="${v.youtubeId}" data-youtube-title="${safeTitleAttr}">
+              <div class="media-stage-zoom absolute inset-0" style="background: radial-gradient(circle at 50% 42%, ${v.accent}52, rgba(11,10,16,0.22) 56%, transparent 78%);"></div>
+              <img src="${v.thumbnailUrl}" alt="${safeTitleAttr}" referrerpolicy="no-referrer" onerror="this.style.display='none'" class="media-stage-zoom absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-95 transition-all duration-300" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/65 pointer-events-none"></div>
+              <div class="absolute inset-0 p-2.5 sm:p-3.5 flex flex-col justify-between z-10">
+                <div class="flex items-center justify-between gap-1.5 text-[10px]">
+                  <span class="px-2 py-0.5 rounded-full bg-black/75 border border-white/15 text-mist-200 font-medium truncate">${v.client}</span>
+                  <a href="${v.youtubeUrl}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();" class="px-2 py-0.5 rounded-full bg-black/75 hover:bg-black/95 hover:border-nebula-400/60 border border-white/15 text-white font-semibold transition inline-flex items-center gap-1 shrink-0">
+                    <span>YouTube</span>
+                    <span>↗</span>
+                  </a>
+                </div>
+
+                <div class="bg-black/80 backdrop-blur-md rounded-lg px-2.5 py-1.5 flex items-center justify-between text-[10px] sm:text-[11px] border border-white/10 relative overflow-hidden">
+                  <div class="hover-scrubber-bar absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-nebula-300 via-nebula-400 to-fuchsia-400"></div>
+                  <span class="font-medium text-mist-200 truncate mr-2">Click to play video</span>
+                  <span class="font-mono text-nebula-300 shrink-0">youtu.be/${v.youtubeId}</span>
+                </div>
+              </div>
+
+              <div class="player-overlay absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/5 transition pointer-events-none z-10">
+                <div class="play-indicator-box w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-black/60 backdrop-blur-md border border-nebula-400/50 flex items-center justify-center shadow-[0_0_28px_rgba(139,92,246,0.45)]">
+                  <svg class="w-4 h-4 sm:w-5 sm:h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+            </div>`
+            : `
             <div class="relative aspect-[4/3] w-full rounded-xl bg-[#05040A] border border-white/[0.08] overflow-hidden cursor-pointer mx-auto" data-player-id="${v.id}" data-duration="${v.duration}">
-              <!-- Dynamic Motion Backdrop that Scales on Card Hover -->
               <div class="media-stage-zoom absolute inset-0" style="background: radial-gradient(circle at 50% 42%, ${v.accent}52, rgba(11,10,16,0.22) 56%, transparent 78%);"></div>
               <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 32px 32px;"></div>
               <div class="absolute inset-0 p-2.5 sm:p-3.5 flex flex-col justify-between z-10">
@@ -2136,7 +2190,6 @@
                   </div>
                 </div>
 
-                <!-- Control Bar: 0:00 / 0:00 & 1x + Hover Scrubber -->
                 <div class="bg-black/80 backdrop-blur-md rounded-lg px-2.5 py-1.5 flex items-center justify-between text-[10px] sm:text-[11px] border border-white/10 relative overflow-hidden">
                   <div class="hover-scrubber-bar absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-nebula-300 via-nebula-400 to-fuchsia-400"></div>
                   <span class="player-time font-mono text-mist-200">0:00 / 0:${v.duration}</span>
@@ -2144,13 +2197,16 @@
                 </div>
               </div>
 
-              <!-- Center Translucent Play Button with Animated Pulse Ring -->
               <div class="player-overlay absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/5 transition pointer-events-none z-10">
                 <div class="play-indicator-box w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/15 backdrop-blur-md border border-white/25 flex items-center justify-center shadow-[0_0_24px_rgba(139,92,246,0.3)]">
                   <svg class="w-4 h-4 sm:w-5 sm:h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
               </div>
-            </div>
+            </div>`;
+
+          return `
+          <div class="interactive-media-card reveal-on-scroll is-inview xtract-bento-card p-2.5 sm:p-3.5 flex flex-col justify-between hover:border-nebula-500/45 group" style="--stagger:${idx}">
+            ${playerMarkup}
 
             <!-- Hook Badge, Title, Metrics & Strategy Proof Cleanly Below the 4:3 Player -->
             <div class="mt-2.5 pt-2 border-t border-white/10 px-0.5 text-left space-y-1">
@@ -2164,11 +2220,23 @@
               <p class="text-[11px] sm:text-xs text-mist-400 leading-relaxed">${v.strategyProof}</p>
             </div>
           </div>
-        `).join('');
+          `;
+        }).join('');
       }
 
       // Attach Interactive Video Card Delegation (Testimonials & Portfolio Cards)
       document.addEventListener('click', function(e) {
+        const ytCard = e.target.closest('[data-youtube-id]');
+        if (ytCard) {
+          if (ytCard.getAttribute('data-yt-mounted') === 'true') return;
+          const ytId = ytCard.getAttribute('data-youtube-id');
+          const ytTitle = (ytCard.getAttribute('data-youtube-title') || 'YouTube Video Player').replace(/"/g, '&quot;');
+          ytCard.setAttribute('data-yt-mounted', 'true');
+          playClickBeep(580);
+          ytCard.innerHTML = `<iframe class="w-full h-full border-0" src="https://www.youtube-nocookie.com/embed/${ytId}?autoplay=1&rel=0&modestbranding=1&playsinline=1" title="${ytTitle}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+          return;
+        }
+
         const speedBtn = e.target.closest('.player-speed-btn');
         if (speedBtn) {
           e.stopPropagation();
@@ -2176,6 +2244,11 @@
           const curr = speedBtn.textContent.trim();
           const next = speeds[(speeds.indexOf(curr) + 1) % speeds.length];
           speedBtn.textContent = next;
+          const parentCard = speedBtn.closest('[data-player-id]');
+          const nativeVid = parentCard ? parentCard.querySelector('.testimonial-native-video') : null;
+          if (nativeVid) {
+            nativeVid.playbackRate = parseFloat(next) || 1;
+          }
           playClickBeep(660);
           return;
         }
@@ -2187,6 +2260,7 @@
         const timeEl = card.querySelector('.player-time');
         const overlayEl = card.querySelector('.player-overlay');
         const pillEl = card.querySelector('.player-status-pill');
+        const nativeVid = card.querySelector('.testimonial-native-video');
 
         if (!activePlayers[pid]) {
           activePlayers[pid] = { sec: 0, timer: null, playing: false };
@@ -2196,6 +2270,9 @@
         if (st.playing) {
           clearInterval(st.timer);
           st.playing = false;
+          if (nativeVid) {
+            try { nativeVid.pause(); } catch (err) {}
+          }
           if (overlayEl) overlayEl.classList.remove(' opacity-0');
           if (overlayEl) overlayEl.style.opacity = '1';
           if (pillEl) pillEl.classList.add('hidden');
@@ -2204,11 +2281,21 @@
           st.playing = true;
           if (overlayEl) overlayEl.style.opacity = '0';
           if (pillEl) pillEl.classList.remove('hidden');
-          playClickBeep(580);
+          if (nativeVid) {
+            try { nativeVid.play(); } catch (err) {}
+          } else {
+            playClickBeep(580);
+          }
           st.timer = setInterval(() => {
-            st.sec = (st.sec + 1) % (duration + 1);
-            if (timeEl) timeEl.textContent = `${formatSec(st.sec)} / 0:${duration}`;
-          }, 1000);
+            if (nativeVid && !isNaN(nativeVid.duration) && nativeVid.duration > 0) {
+              const cur = Math.floor(nativeVid.currentTime || 0);
+              const tot = Math.floor(nativeVid.duration || duration);
+              if (timeEl) timeEl.textContent = `${formatSec(cur)} / ${formatSec(tot)}`;
+            } else {
+              st.sec = (st.sec + 1) % (duration + 1);
+              if (timeEl) timeEl.textContent = `${formatSec(st.sec)} / 0:${duration}`;
+            }
+          }, 500);
         }
       });
 
