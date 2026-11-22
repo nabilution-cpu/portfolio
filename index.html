@@ -11,42 +11,46 @@
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Hanken+Grotesk:ital,wght@0,300..800;1,300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Hanken Grotesk"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-            display: ['Fraunces', 'Georgia', '"Times New Roman"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
           },
           colors: {
-            bgDeep: '#030305',
-            bgCard: '#0B0A10',
-            bgCardInner: '#0F0D18',
+            bgDeep: '#090401',
+            bgCard: '#120C09',
+            bgCardInner: '#18100C',
+            obsidian: {
+              900: '#120C09',
+              950: '#090401',
+            },
             nebula: {
-              50:  '#F5F3FF',
-              100: '#EDE9FE',
-              200: '#DDD6FE',
-              300: '#C4B5FD',
-              400: '#A78BFA',
-              500: '#8B5CF6',
-              600: '#7C3AED',
-              700: '#6D28D9',
-              800: '#5B21B6',
-              900: '#4C1D95',
+              50:  '#FFF5F1',
+              100: '#FFE6DC',
+              200: '#FFC7B3',
+              300: '#F59E7E',
+              400: '#ED795C',
+              500: '#D95130',
+              600: '#D4482C',
+              700: '#A84027',
+              800: '#7C2B16',
+              900: '#4A190C',
             },
             mist: {
-              100: '#F9FAFB',
-              200: '#E5E7EB',
-              300: '#D1D5DB',
-              400: '#9CA3AF',
-              500: '#6B7280',
-              600: '#4B5563',
-              700: '#374151',
-              800: '#1F2937',
-              900: '#111827',
+              100: '#FAF8F7',
+              200: '#E7E2DF',
+              300: '#C9C0BC',
+              400: '#9E938E',
+              500: '#736863',
+              600: '#524844',
+              700: '#38302D',
+              800: '#221C1A',
+              900: '#140E0C',
             },
           }
         }
@@ -56,43 +60,62 @@
   <style>
     :root {
       color-scheme: dark;
-      --bg-canvas: #030305;
-      --bg-surface: #0B0A10;
+      --bg-canvas: #090401;
+      --bg-surface: #120C09;
       --bg-surface-glass: rgba(255, 255, 255, 0.04);
-      --accent-primary: #8B5CF6;
-      --accent-glow: #6D28D9;
+      --accent-primary: #D95130;
+      --accent-secondary: #E88843;
+      --accent-glow: #A84027;
       --text-primary: #FFFFFF;
-      --text-secondary: #9CA3AF;
+      --text-secondary: #9E938E;
       --border-subtle: rgba(255, 255, 255, 0.08);
-      --border-highlight: rgba(139, 92, 246, 0.35);
-      --hero-bg-start: #0B0A10;
-      --hero-bg-end: #030305;
-      --hero-core-glow: rgba(139, 92, 246, 0.28);
-      --hero-rim-glow: rgba(109, 40, 217, 0.16);
-      --hero-card-surface: #0B0A10;
+      --border-highlight: rgba(217, 81, 48, 0.48);
+      --hero-bg-start: #140B07;
+      --hero-bg-end: #090401;
+      --hero-core-glow: rgba(217, 81, 48, 0.34);
+      --hero-rim-glow: rgba(232, 136, 67, 0.20);
+      --hero-card-surface: #120C09;
       --hero-card-border: rgba(255, 255, 255, 0.08);
-      --hero-subtext: #9CA3AF;
+      --hero-subtext: #9E938E;
     }
     body {
       background-color: var(--bg-canvas);
       color: var(--text-primary);
-      font-family: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
+      font-family: 'Plus Jakarta Sans', 'Inter', ui-sans-serif, system-ui, sans-serif;
       overflow-x: hidden;
     }
-    /* Display serif: Fraunces. Light weights read as expensive on dark; optical sizing handles small sizes. */
+    /* ClipCut Geometric Display Typography (PP Neue Montreal Medium aesthetic) */
     body .font-display {
-      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+      font-family: 'Plus Jakarta Sans', 'Inter', ui-sans-serif, system-ui, sans-serif;
       font-weight: 500;
-      letter-spacing: -0.015em;
-      font-optical-sizing: auto;
+      letter-spacing: -0.03em;
     }
     body h1.font-display,
-    body h2.font-display {
-      font-weight: 400;
-      letter-spacing: -0.028em;
+    body h2.font-display,
+    body h3.font-display {
+      font-weight: 500;
+      letter-spacing: -0.035em;
+      line-height: 1.22 !important;
     }
 
-    /* ===== Xtract Dark Obsidian & Violet Glow Atmosphere ===== */
+    /* Signature ClipCut White-to-Terracotta Gradient Text */
+    .clipcut-text-grad {
+      background: linear-gradient(173deg, rgba(255, 255, 255, 0.96) 32%, rgb(237, 121, 92) 68%, rgb(212, 72, 44) 88%, rgb(232, 136, 67) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      display: inline-block;
+      padding-bottom: 0.06em;
+      line-height: 1.22;
+    }
+    .clipcut-number-grad {
+      background: linear-gradient(180deg, #F59E7E 0%, #D95130 58%, #A84027 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    /* ===== ClipCut Warm Ember & Fluted Obsidian Atmosphere ===== */
     html::before,
     body::before,
     body::after,
@@ -100,70 +123,95 @@
     #home::before {
       display: none;
     }
-    @keyframes nebulaBreath {
-      0% { transform: scale(1) translate3d(0, 0, 0); }
-      100% { transform: scale(1.03) translate3d(-0.6%, 0.5%, 0); }
-    }
     @keyframes starfieldDrift {
       0% { transform: translate3d(0, 0, 0); }
-      50% { transform: translate3d(-12px, 8px, 0); }
+      50% { transform: translate3d(-10px, 6px, 0); }
       100% { transform: translate3d(0, 0, 0); }
     }
 
-    /* Subtle low-opacity white/violet starfield dot texture for Hero & CTA sections */
+    /* ClipCut Warm Stardust & 4-Point Sparkle Field */
     .xtract-starfield {
       background-image:
-        radial-gradient(1.3px 1.3px at 14% 18%, rgba(255, 255, 255, 0.9) 50%, transparent 100%),
-        radial-gradient(1.1px 1.1px at 28% 42%, rgba(196, 181, 253, 0.85) 50%, transparent 100%),
-        radial-gradient(1.4px 1.4px at 42% 14%, rgba(255, 255, 255, 0.8) 50%, transparent 100%),
-        radial-gradient(1.2px 1.2px at 64% 26%, rgba(139, 92, 246, 0.95) 50%, transparent 100%),
-        radial-gradient(1.3px 1.3px at 78% 12%, rgba(255, 255, 255, 0.85) 50%, transparent 100%),
-        radial-gradient(1.1px 1.1px at 88% 38%, rgba(221, 214, 254, 0.8) 50%, transparent 100%),
-        radial-gradient(1.3px 1.3px at 19% 68%, rgba(167, 139, 250, 0.85) 50%, transparent 100%),
-        radial-gradient(1.1px 1.1px at 36% 79%, rgba(255, 255, 255, 0.75) 50%, transparent 100%),
-        radial-gradient(1.4px 1.4px at 56% 72%, rgba(196, 181, 253, 0.85) 50%, transparent 100%),
-        radial-gradient(1.1px 1.1px at 74% 64%, rgba(255, 255, 255, 0.8) 50%, transparent 100%),
-        radial-gradient(1.3px 1.3px at 92% 76%, rgba(139, 92, 246, 0.85) 50%, transparent 100%),
-        radial-gradient(1.1px 1.1px at 8% 88%, rgba(255, 255, 255, 0.75) 50%, transparent 100%);
-      background-size: 320px 260px;
-      opacity: 0.36;
-      animation: starfieldDrift 42s ease-in-out infinite;
+        radial-gradient(1.4px 1.4px at 12% 16%, rgba(255, 255, 255, 0.9) 50%, transparent 100%),
+        radial-gradient(1.2px 1.2px at 26% 38%, rgba(237, 121, 92, 0.85) 50%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 44% 14%, rgba(255, 255, 255, 0.75) 50%, transparent 100%),
+        radial-gradient(1.3px 1.3px at 66% 24%, rgba(232, 136, 67, 0.9) 50%, transparent 100%),
+        radial-gradient(1.2px 1.2px at 80% 14%, rgba(255, 255, 255, 0.85) 50%, transparent 100%),
+        radial-gradient(1.1px 1.1px at 90% 42%, rgba(245, 158, 126, 0.8) 50%, transparent 100%),
+        radial-gradient(1.3px 1.3px at 18% 70%, rgba(217, 81, 48, 0.85) 50%, transparent 100%),
+        radial-gradient(1.1px 1.1px at 38% 82%, rgba(255, 255, 255, 0.7) 50%, transparent 100%),
+        radial-gradient(1.4px 1.4px at 58% 74%, rgba(232, 136, 67, 0.85) 50%, transparent 100%),
+        radial-gradient(1.1px 1.1px at 76% 64%, rgba(255, 255, 255, 0.8) 50%, transparent 100%),
+        radial-gradient(1.3px 1.3px at 92% 78%, rgba(217, 81, 48, 0.85) 50%, transparent 100%);
+      background-size: 340px 280px;
+      opacity: 0.14;
+    }
+
+    /* Subtle Architectural Vertical Fluted Texture */
+    .clipcut-fluted-bg {
+      background-image: repeating-linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.007) 0px,
+        rgba(255, 255, 255, 0.007) 54px,
+        rgba(0, 0, 0, 0.14) 54px,
+        rgba(0, 0, 0, 0.14) 108px
+      );
+    }
+
+    /* Balanced Top-Center Ambient Ember Glow in Hero (Symmetric Left & Right) */
+    .clipcut-hero-sun {
+      position: absolute;
+      top: -220px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 980px;
+      max-width: 100vw;
+      height: 540px;
+      border-radius: 9999px;
+      pointer-events: none;
+      background:
+        radial-gradient(
+          ellipse 65% 60% at 50% 35%,
+          rgba(232, 136, 67, 0.32) 0%,
+          rgba(217, 81, 48, 0.24) 32%,
+          rgba(168, 64, 39, 0.12) 56%,
+          rgba(9, 4, 1, 0) 80%
+        );
+      filter: blur(48px);
+      opacity: 0.9;
     }
 
     .hero-grid-backdrop {
       background-image:
-        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-      background-size: 140px 140px;
+        linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      background-size: 120px 120px;
       -webkit-mask-image: radial-gradient(ellipse 68% 58% at 50% 42%, #000 10%, transparent 78%);
       mask-image: radial-gradient(ellipse 68% 58% at 50% 42%, #000 10%, transparent 78%);
       opacity: 0.45;
     }
-    /* Centered Hero Focal Glow strictly behind H1 */
+
     .hero-ambient-aura {
       background:
-        radial-gradient(circle 340px at 50% 38%, rgba(139, 92, 246, 0.28) 0%, rgba(109, 40, 217, 0.14) 42%, rgba(3, 3, 5, 0) 70%);
+        radial-gradient(circle 420px at 50% 34%, rgba(212, 72, 44, 0.22) 0%, rgba(168, 64, 39, 0.12) 45%, rgba(9, 4, 1, 0) 72%);
       filter: blur(80px);
     }
-    /* Soft diffused violet halo ring matching Xtract hero ring aesthetic */
+
     .xtract-hero-ring {
       position: absolute;
       left: 50%;
       top: 235px;
-      width: 420px;
-      height: 420px;
-      transform: translate(-50%, -50%) rotate(-18deg);
+      width: 440px;
+      height: 440px;
+      transform: translate(-50%, -50%);
       border-radius: 9999px;
       background:
-        radial-gradient(circle at 50% 50%, rgba(3, 3, 5, 0.75) 0%, rgba(3, 3, 5, 0.35) 36%, rgba(139, 92, 246, 0.42) 52%, rgba(109, 40, 217, 0.28) 64%, rgba(3, 3, 5, 0) 76%);
-      box-shadow:
-        inset 0 0 65px rgba(139, 92, 246, 0.38),
-        0 0 110px rgba(109, 40, 217, 0.28);
-      filter: blur(36px);
+        radial-gradient(circle at 50% 50%, rgba(9, 4, 1, 0.65) 0%, rgba(9, 4, 1, 0.25) 36%, rgba(217, 81, 48, 0.30) 54%, rgba(232, 136, 67, 0.18) 65%, rgba(9, 4, 1, 0) 76%);
+      filter: blur(42px);
       pointer-events: none;
     }
 
-    /* Electric Violet Horizon Back-Glow Behind Hero Video Frame */
+    /* Warm Ember Horizon Back-Glow Behind Hero Video Frame */
     .reflex-horizon-stage {
       position: relative;
       width: 100%;
@@ -182,7 +230,7 @@
       max-width: 700px;
       height: 150px;
       border-radius: 999px;
-      background: radial-gradient(ellipse 68% 78% at 50% 100%, rgba(139, 92, 246, 0.34) 0%, rgba(109, 40, 217, 0.18) 45%, transparent 78%);
+      background: radial-gradient(ellipse 68% 78% at 50% 100%, rgba(217, 81, 48, 0.38) 0%, rgba(168, 64, 39, 0.20) 45%, transparent 78%);
       filter: blur(36px);
     }
     .reflex-horizon-ring-outer,
@@ -195,126 +243,90 @@
       width: 74%;
       max-width: 680px;
       height: 16px;
-      background: radial-gradient(ellipse 60% 100% at 50% 50%, rgba(221, 214, 254, 0.72) 0%, rgba(139, 92, 246, 0.48) 38%, rgba(109, 40, 217, 0.18) 70%, transparent 90%);
+      background: radial-gradient(ellipse 60% 100% at 50% 50%, rgba(255, 199, 179, 0.72) 0%, rgba(217, 81, 48, 0.52) 38%, rgba(168, 64, 39, 0.20) 70%, transparent 90%);
       filter: blur(8px);
     }
 
-    /* Floating Hero UI Cards */
-    @keyframes heroCardFloatA {
-      0%, 100% { transform: translate3d(0, 0, 0) rotate(-2.5deg); }
-      50% { transform: translate3d(0, -7px, 0) rotate(-1.8deg); }
-    }
-    @keyframes heroCardFloatB {
-      0%, 100% { transform: translate3d(0, 0, 0) rotate(2.2deg); }
-      50% { transform: translate3d(0, -8px, 0) rotate(1.5deg); }
-    }
-    @keyframes heroCardFloatC {
-      0%, 100% { transform: translate3d(0, 0, 0) rotate(1.4deg); }
-      50% { transform: translate3d(0, -6px, 0) rotate(2.1deg); }
-    }
-    @keyframes heroPillFloat {
-      0%, 100% { transform: translate3d(0, 0, 0); }
-      50% { transform: translate3d(0, -5px, 0); }
-    }
-    .hero-ui-card {
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%), #0B0A10;
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid var(--border-subtle);
-      border-radius: 16px;
-      box-shadow:
-        0 20px 45px -15px rgba(0, 0, 0, 0.85),
-        inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
-      transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .hero-ui-card:hover {
-      border-color: var(--border-highlight);
-      box-shadow:
-        0 24px 52px -12px rgba(0, 0, 0, 0.92),
-        0 0 38px -8px rgba(139, 92, 246, 0.35),
-        inset 0 1px 0 0 rgba(255, 255, 255, 0.16);
-    }
-    .float-card-a { animation: heroCardFloatA 7.5s ease-in-out infinite; }
-    .float-card-b { animation: heroCardFloatB 8.2s ease-in-out 1.2s infinite; }
-    .float-card-c { animation: heroCardFloatC 7.8s ease-in-out 2.1s infinite; }
-    .float-pill-d { animation: heroPillFloat 6.6s ease-in-out 0.8s infinite; }
-    .float-pill-e { animation: heroPillFloat 7.2s ease-in-out 1.7s infinite; }
-
-    @media (prefers-reduced-motion: reduce) {
-      .float-card-a, .float-card-b, .float-card-c, .float-pill-d, .float-pill-e, .hero-ambient-aura, .xtract-starfield {
-        animation: none !important;
-      }
-    }
-
-    /* Xtract Bento Cards, Badges, Secondary CTAs & Focused Violet Vignettes */
+    /* ClipCut Bento Cards, Section Pill Badges (— Label —), and Buttons */
     .xtract-bento-card {
-      background-color: var(--bg-surface);
-      background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
-      border: 1px solid var(--border-subtle);
-      border-radius: 16px;
-      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+      background-color: #110B08;
+      background-image:
+        radial-gradient(85% 65% at 50% 105%, rgba(212, 72, 44, 0.14) 0%, rgba(17, 11, 8, 0) 72%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.008) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.09);
       transition: border-color 0.3s ease, box-shadow 0.35s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .xtract-bento-card:hover {
-      border-color: rgba(139, 92, 246, 0.25);
+      border-color: rgba(217, 81, 48, 0.36);
     }
     .xtract-bento-card-featured {
-      border-color: var(--border-highlight);
+      border-color: rgba(217, 81, 48, 0.62);
+      background-image:
+        radial-gradient(90% 70% at 50% 100%, rgba(217, 81, 48, 0.24) 0%, rgba(17, 11, 8, 0) 75%),
+        radial-gradient(70% 45% at 50% 0%, rgba(232, 136, 67, 0.14) 0%, rgba(17, 11, 8, 0) 70%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%);
       box-shadow:
-        inset 0 1px 0 0 rgba(255, 255, 255, 0.14),
-        0 0 44px -16px rgba(109, 40, 217, 0.35);
+        inset 0 1px 0 0 rgba(245, 158, 126, 0.28),
+        0 0 48px -14px rgba(212, 72, 44, 0.38);
     }
+
+    /* Section Pill Badge */
     .xtract-badge {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      padding: 0.375rem 0.875rem;
+      gap: 0.6rem;
+      padding: 0.42rem 1.05rem;
       border-radius: 9999px;
-      background: var(--bg-surface-glass);
-      border: 1px solid var(--border-subtle);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      color: #E5E7EB;
-      font-size: 0.75rem;
+      background: #17110E;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.08), 0 8px 20px rgba(0, 0, 0, 0.5);
+      color: #F3EEEC;
+      font-size: 0.78rem;
       font-weight: 500;
+      letter-spacing: -0.01em;
     }
-    .xtract-badge-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 9999px;
-      background: var(--accent-primary);
-      box-shadow: 0 0 10px 2px rgba(139, 92, 246, 0.78);
-      flex-shrink: 0;
-    }
+
+    /* ClipCut Secondary Outline Pill Button */
     .btn-xtract-secondary {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(217, 81, 48, 0.10);
+      border: 1px solid rgba(217, 81, 48, 0.52);
       color: #FFFFFF;
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      border-radius: 8px;
-      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      border-radius: 9999px !important;
+      transition: all 0.24s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .btn-xtract-secondary:hover {
-      background: rgba(255, 255, 255, 0.11);
-      border-color: var(--border-highlight);
+      background: rgba(217, 81, 48, 0.20);
+      border-color: rgba(237, 121, 92, 0.85);
+      box-shadow: 0 0 24px rgba(217, 81, 48, 0.28);
       color: #FFFFFF;
     }
+
     .brand-mark-violet {
-      background: linear-gradient(180deg, #9333EA 0%, #7C3AED 100%);
-      border: 1px solid rgba(196, 181, 253, 0.45);
-      box-shadow: 0 0 18px rgba(139, 92, 246, 0.42), inset 0 1px 0 0 rgba(255, 255, 255, 0.28);
+      background: linear-gradient(180deg, #E88843 0%, #D4482C 100%);
+      border: 1px solid rgba(245, 158, 126, 0.55);
+      box-shadow: 0 0 18px rgba(217, 81, 48, 0.42), inset 0 1px 0 0 rgba(255, 255, 255, 0.32);
     }
 
     .ring-glow {
       background:
-        radial-gradient(ellipse 46% 32% at 50% 0%, rgba(109, 40, 217, 0.16) 0%, rgba(11, 10, 16, 0) 70%);
+        radial-gradient(ellipse 46% 32% at 50% 0%, rgba(212, 72, 44, 0.20) 0%, rgba(18, 12, 9, 0) 70%);
     }
     .diagonal-rays {
-      background-color: var(--bg-surface);
+      background-color: #110B08;
       background-image:
-        radial-gradient(ellipse 46% 28% at 50% 0%, rgba(109, 40, 217, 0.18) 0%, transparent 72%),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+        radial-gradient(ellipse 52% 34% at 85% 15%, rgba(212, 72, 44, 0.22) 0%, transparent 72%),
+        radial-gradient(ellipse 48% 32% at 15% 95%, rgba(168, 64, 39, 0.18) 0%, transparent 72%),
+        repeating-linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.012) 0px,
+          rgba(255, 255, 255, 0.012) 54px,
+          rgba(0, 0, 0, 0.26) 54px,
+          rgba(0, 0, 0, 0.26) 108px
+        );
     }
     .top-border-glow {
       position: relative;
@@ -323,10 +335,10 @@
       content: '';
       position: absolute;
       top: -1px;
-      left: 18%;
-      right: 18%;
+      left: 16%;
+      right: 16%;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.7), rgba(221, 214, 254, 0.75), rgba(139, 92, 246, 0.7), transparent);
+      background: linear-gradient(90deg, transparent, rgba(217, 81, 48, 0.75), rgba(245, 158, 126, 0.85), rgba(217, 81, 48, 0.75), transparent);
       pointer-events: none;
     }
     .footer-top-beam {
@@ -340,7 +352,7 @@
       transform: translateX(-50%);
       width: 60%;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.85), transparent);
+      background: linear-gradient(90deg, transparent, rgba(217, 81, 48, 0.85), transparent);
     }
     .footer-top-beam::after {
       content: '';
@@ -348,36 +360,37 @@
       top: 0;
       left: 50%;
       transform: translateX(-50%);
-      width: 340px;
-      height: 110px;
-      background: radial-gradient(ellipse at 50% 0%, rgba(109, 40, 217, 0.22), transparent 70%);
+      width: 420px;
+      height: 130px;
+      background: radial-gradient(ellipse at 50% 0%, rgba(212, 72, 44, 0.24), transparent 70%);
       pointer-events: none;
     }
-    /* Primary CTA button (Xtract Electric Violet) */
+
+    /* ClipCut Primary Ember Pill CTA Button */
     .btn-nebula {
-      background: linear-gradient(180deg, #9333EA 0%, #7C3AED 100%);
-      border: 1px solid rgba(196, 181, 253, 0.36);
-      border-radius: 8px;
-      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25), 0 0 24px rgba(139, 92, 246, 0.45);
+      background: linear-gradient(180deg, #E25E3A 0%, #C84322 100%);
+      border: 1px solid rgba(245, 158, 126, 0.5);
+      border-radius: 9999px !important;
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.28), 0 8px 26px rgba(212, 72, 44, 0.42);
       transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
     }
     body .btn-nebula {
       color: #FFFFFF;
     }
     .btn-nebula:hover {
-      background: linear-gradient(180deg, #A855F7 0%, #8B5CF6 100%);
-      border-color: rgba(221, 214, 254, 0.65);
-      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.35), 0 0 32px rgba(139, 92, 246, 0.65);
+      background: linear-gradient(180deg, #ED6D4A 0%, #D95130 100%);
+      border-color: rgba(255, 199, 179, 0.75);
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.38), 0 12px 34px rgba(217, 81, 48, 0.62);
       transform: translateY(-1px);
     }
     /* Active pills / selected states */
     body .bg-nebula-600 {
-      background-image: linear-gradient(180deg, #9333EA 0%, #7C3AED 100%);
+      background-image: linear-gradient(180deg, #E25E3A 0%, #C84322 100%);
       color: #FFFFFF;
-      box-shadow: 0 0 16px rgba(139, 92, 246, 0.35);
+      box-shadow: 0 0 18px rgba(217, 81, 48, 0.38);
     }
     :focus-visible {
-      outline: 2px solid #8B5CF6;
+      outline: 2px solid #D95130;
       outline-offset: 2px;
     }
     /* Infinite Marquee Keyframes */
@@ -409,7 +422,7 @@
       mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
       -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
     }
-    /* Semicircular Ferris-Wheel Arc Layout matching SmoothSinc Hero & Credibility Screenshots */
+    /* Semicircular Ferris-Wheel Arc Layout */
     .arc-stage-hero {
       position: relative;
       width: 100%;
@@ -455,7 +468,7 @@
       box-shadow: 0 14px 34px rgba(0, 0, 0, 0.8);
       border: 1px solid rgba(255, 255, 255, 0.12);
       transition: filter 0.35s ease, border-color 0.35s ease;
-      background: #0B0A10;
+      background: #120C09;
       user-select: none;
     }
     .arc-card-slot img {
@@ -470,11 +483,11 @@
     }
     .arc-card-hero:hover {
       filter: grayscale(0%) brightness(1) contrast(1);
-      border-color: rgba(139, 92, 246, 0.75);
+      border-color: rgba(217, 81, 48, 0.8);
       z-index: 30;
     }
     .arc-card-cred:hover {
-      border-color: rgba(139, 92, 246, 0.85);
+      border-color: rgba(217, 81, 48, 0.85);
       z-index: 30;
     }
     @media (max-width: 768px) {
@@ -507,70 +520,28 @@
       height: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: #030305;
+      background: #090401;
     }
     ::-webkit-scrollbar-thumb {
-      background: #4C1D95;
+      background: #7C2B16;
       border-radius: 4px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #8B5CF6;
+      background: #D95130;
     }
 
-    /* Glowing Interactive Cursor Dot (Dot Only, No Outer Ring) */
     #cursorGlowDot {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 10px;
-      height: 10px;
-      margin-left: -5px;
-      margin-top: -5px;
-      border-radius: 9999px;
-      pointer-events: none;
-      z-index: 99999;
-      opacity: 0;
-      background: #F5F3FF;
-      box-shadow:
-        0 0 10px 3px rgba(196, 181, 253, 0.9),
-        0 0 24px 7px rgba(139, 92, 246, 0.8),
-        0 0 44px 12px rgba(109, 40, 217, 0.5);
-      will-change: transform, opacity;
-      transition: opacity 0.2s ease, width 0.18s ease, height 0.18s ease, margin 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease;
-    }
-    #cursorGlowDot.cursor-hover {
-      width: 14px;
-      height: 14px;
-      margin-left: -7px;
-      margin-top: -7px;
-      background: #ffffff;
-      box-shadow:
-        0 0 14px 4px rgba(221, 214, 254, 1),
-        0 0 32px 10px rgba(139, 92, 246, 0.95),
-        0 0 56px 16px rgba(109, 40, 217, 0.65);
-    }
-    #cursorGlowDot.cursor-down {
-      width: 7px;
-      height: 7px;
-      margin-left: -3.5px;
-      margin-top: -3.5px;
-      background: #EDE9FE;
-    }
-    @media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
-      #cursorGlowDot {
-        display: none !important;
-      }
+      display: none !important;
     }
 
     /* ==========================================
-       PREMIUM STUDIO MOTION DESIGN SYSTEM
+       CLIPCUT STUDIO MOTION DESIGN SYSTEM
        ========================================== */
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 80px;
+      scroll-padding-top: 90px;
     }
 
-    /* 1. Hero Staggered Entrance & Decorative Ambient Float */
     @keyframes heroEntranceUp {
       0% {
         opacity: 0.86;
@@ -587,14 +558,6 @@
       }
       50% {
         transform: translate3d(0, -5px, 0);
-      }
-    }
-    @keyframes ambientFloatBadgeTilt {
-      0%, 100% {
-        transform: translateY(-4px) rotate(6deg);
-      }
-      50% {
-        transform: translateY(-8px) rotate(9deg);
       }
     }
     @keyframes playRipplePulse {
@@ -622,8 +585,8 @@
     }
     #heroVslViewport:has(#heroVslCenterOverlay:hover) {
       transform: scale(1.018);
-      box-shadow: 0 24px 64px -8px rgba(139, 92, 246, 0.58), 0 0 0 1px rgba(167, 139, 250, 0.45);
-      filter: drop-shadow(0 16px 36px rgba(139, 92, 246, 0.38));
+      box-shadow: 0 24px 64px -8px rgba(217, 81, 48, 0.58), 0 0 0 1px rgba(237, 121, 92, 0.5);
+      filter: drop-shadow(0 16px 36px rgba(217, 81, 48, 0.38));
     }
 
     .hero-stagger-1 { animation: heroEntranceUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.04s both; }
@@ -638,7 +601,6 @@
     .float-ambient-3 { animation: ambientFloatSlow 5.8s ease-in-out 2.2s infinite; }
     .float-ambient-4 { animation: ambientFloatSlow 6.8s ease-in-out 0.6s infinite; }
 
-    /* 2. Scroll-Triggered Reveal & Clip-Mask Image Transitions (Zero Blank Risk) */
     .reveal-on-scroll {
       transform: translate3d(0, 26px, 0);
       transition:
@@ -665,7 +627,6 @@
       transform: scale(1);
     }
 
-    /* 3. Button Specular Sheen & Magnetic Micro-Interaction */
     .btn-nebula {
       position: relative;
       overflow: hidden;
@@ -692,10 +653,9 @@
       transform: rotate(25deg) translate3d(380%, 0, 0);
     }
 
-    /* 4. Navigation Link Animated Underline & Active Section Indicator */
     .nav-item-link {
       position: relative;
-      padding-bottom: 4px;
+      padding-bottom: 2px;
       transition: color 0.25s ease;
     }
     .nav-item-link::after {
@@ -703,10 +663,10 @@
       position: absolute;
       left: 0;
       right: 0;
-      bottom: -2px;
+      bottom: -3px;
       height: 2px;
       border-radius: 999px;
-      background: linear-gradient(90deg, #A78BFA, #8B5CF6);
+      background: linear-gradient(90deg, #E88843, #D95130);
       transform: scaleX(0);
       transform-origin: right center;
       transition: transform 0.34s cubic-bezier(0.16, 1, 0.3, 1);
@@ -720,7 +680,6 @@
       color: #ffffff;
     }
 
-    /* 5. Portfolio & Testimonial Card Hover Elevation, Thumbnail Scale & Muted Preview Waveform */
     .interactive-media-card {
       transition:
         transform 0.48s cubic-bezier(0.16, 1, 0.3, 1),
@@ -731,7 +690,7 @@
     .interactive-media-card:hover {
       transform: translate3d(0, -6px, 0);
       border-color: var(--border-highlight);
-      box-shadow: 0 22px 48px -14px rgba(109, 40, 217, 0.35), inset 0 1px 0 0 rgba(255, 255, 255, 0.14);
+      box-shadow: 0 22px 48px -14px rgba(212, 72, 44, 0.35), inset 0 1px 0 0 rgba(255, 255, 255, 0.14);
     }
     .media-stage-zoom {
       transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
@@ -750,16 +709,16 @@
     }
     .interactive-media-card:hover .play-indicator-box {
       transform: scale(1.1);
-      background-color: rgba(139, 92, 246, 0.35);
-      border-color: rgba(196, 181, 253, 0.65);
-      box-shadow: 0 0 28px rgba(139, 92, 246, 0.55);
+      background-color: rgba(217, 81, 48, 0.42);
+      border-color: rgba(245, 158, 126, 0.72);
+      box-shadow: 0 0 28px rgba(217, 81, 48, 0.58);
     }
     .play-indicator-box::before {
       content: '';
       position: absolute;
       inset: -2px;
       border-radius: inherit;
-      border: 1.5px solid rgba(196, 181, 253, 0.6);
+      border: 1.5px solid rgba(245, 158, 126, 0.65);
       opacity: 0;
       pointer-events: none;
     }
@@ -767,7 +726,6 @@
       animation: playRipplePulse 1.45s cubic-bezier(0.16, 1, 0.3, 1) infinite;
     }
 
-    /* Muted Video Preview Waveform & Scrubber on Card Hover */
     .hover-preview-eq {
       opacity: 0;
       transform: translateY(4px);
@@ -781,7 +739,7 @@
       width: 2.5px;
       height: 11px;
       border-radius: 999px;
-      background: #C4B5FD;
+      background: #F59E7E;
       transform-origin: bottom center;
       transform: scaleY(0.3);
     }
@@ -799,17 +757,16 @@
       transform: scaleX(1);
     }
 
-    /* Contextual Portfolio State for Single Glowing Cursor Dot */
     #cursorGlowDot.cursor-portfolio {
       width: 18px;
       height: 18px;
       margin-left: -9px;
       margin-top: -9px;
-      background: #F5F3FF;
+      background: #FFF5F1;
       box-shadow:
-        0 0 16px 5px rgba(196, 181, 253, 1),
-        0 0 38px 12px rgba(139, 92, 246, 0.95),
-        0 0 68px 20px rgba(109, 40, 217, 0.75);
+        0 0 16px 5px rgba(245, 158, 126, 1),
+        0 0 38px 12px rgba(217, 81, 48, 0.95),
+        0 0 68px 20px rgba(168, 64, 39, 0.75);
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -827,64 +784,65 @@
     }
 
     /* ==========================================
-       XTRACT DARK OBSIDIAN & VIOLET GLOW THEME
+       CLIPCUT EMBER & ESPRESSO THEME OVERRIDES
        ========================================== */
     #home {
       background: var(--bg-canvas);
     }
     #home .hero-cta-amber,
     .btn-nebula {
-      background: linear-gradient(180deg, #9333EA 0%, #7C3AED 100%) !important;
+      background: linear-gradient(180deg, #E25E3A 0%, #C84322 100%) !important;
       color: #FFFFFF !important;
-      border: 1px solid rgba(196, 181, 253, 0.36) !important;
-      border-radius: 8px !important;
+      border: 1px solid rgba(245, 158, 126, 0.5) !important;
+      border-radius: 9999px !important;
       box-shadow:
-        inset 0 1px 0 0 rgba(255, 255, 255, 0.24),
-        0 0 24px rgba(139, 92, 246, 0.45) !important;
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.28),
+        0 8px 28px rgba(212, 72, 44, 0.45) !important;
     }
     #home .hero-cta-amber:hover,
     .btn-nebula:hover {
-      background: linear-gradient(180deg, #A855F7 0%, #8B5CF6 100%) !important;
-      border-color: rgba(221, 214, 254, 0.65) !important;
+      background: linear-gradient(180deg, #ED6D4A 0%, #D95130 100%) !important;
+      border-color: rgba(255, 199, 179, 0.75) !important;
       box-shadow:
-        inset 0 1px 0 0 rgba(255, 255, 255, 0.35),
-        0 0 32px rgba(139, 92, 246, 0.65) !important;
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.38),
+        0 12px 36px rgba(217, 81, 48, 0.65) !important;
     }
     #heroSocialAvatars img {
-      --tw-ring-color: #0B0A10 !important;
+      --tw-ring-color: #120C09 !important;
     }
   </style>
 </head>
-<body class="min-h-screen bg-[#030305] text-white antialiased selection:bg-nebula-500 selection:text-white">
+<body class="min-h-screen bg-[#090401] text-white antialiased selection:bg-nebula-500 selection:text-white">
   <!-- Glowing Interactive Cursor Dot & Halo -->
   <div id="cursorGlowDot" aria-hidden="true"></div>
 
-  <!-- STICKY NAVBAR -->
-  <header class="sticky top-0 z-40 backdrop-blur-xl bg-[#030305]/80 border-b border-white/[0.08]">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
-      <!-- Brand Logo -->
+  <!-- CLIPCUT FLOATING ROUNDED-PILL NAVBAR -->
+  <header class="sticky top-4 z-40 px-4 sm:px-6">
+    <div class="max-w-4xl mx-auto h-16 px-4 sm:px-5 rounded-full backdrop-blur-2xl bg-[#140D0A]/85 border border-white/[0.10] shadow-[0_18px_45px_rgba(0,0,0,0.75)] flex items-center justify-between gap-4">
+      <!-- Brand Logo (ClipCut Pill Header Style with Alve Nabil White-BG Photo) -->
       <a href="#home" class="flex items-center gap-2.5 group focus:outline-none">
-        <div class="w-9 h-9 rounded-xl brand-mark-violet p-[1.5px] flex items-center justify-center overflow-hidden shrink-0">
-          <img src="/public/assets/alve_nabil_white.png" alt="Alve Nabil" class="w-full h-full object-cover rounded-[10.5px] transition-transform duration-300 group-hover:scale-105" />
+        <div class="w-8 h-8 rounded-lg bg-white p-[1px] flex items-center justify-center overflow-hidden shrink-0 shadow-sm">
+          <img src="/public/assets/alve_nabil_white.png" alt="Alve Nabil" class="w-full h-full object-cover rounded-[7px] transition-transform duration-300 group-hover:scale-105" />
         </div>
-        <span id="navBrandName" class="font-display font-bold text-lg tracking-tight text-white">Alve Nabil.</span>
+        <span id="navBrandName" class="font-display font-medium text-lg tracking-tight text-white">Alve Nabil</span>
       </a>
 
-      <!-- Center Nav Links (Desktop nav: Home · Results · Work · About · Why Me · Book a Call) -->
-      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-mist-300 px-6 py-2 rounded-full bg-white/[0.03] border border-white/[0.08] shadow-inner" id="desktopNav">
-        <a href="#home" data-nav-section="home" class="nav-item-link nav-active hover:text-white">Home</a>
-        <a href="#results" data-nav-section="results" class="nav-item-link hover:text-white">Results</a>
+      <!-- Center Nav Links (ClipCut Minimal Nav) -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-normal text-mist-300" id="desktopNav">
+        <a href="#about" data-nav-section="about" class="nav-item-link hover:text-white">Services</a>
         <a href="#portfolio" data-nav-section="portfolio" class="nav-item-link hover:text-white">Work</a>
-        <a href="#about" data-nav-section="about" class="nav-item-link hover:text-white">About</a>
+        <a href="#results" data-nav-section="results" class="nav-item-link hover:text-white">Results</a>
         <a href="#why-us" data-nav-section="why-us" class="nav-item-link hover:text-white">Why Me</a>
+        <a href="#lets-talk" data-nav-section="lets-talk" class="nav-item-link hover:text-white">Contact</a>
       </nav>
 
-      <!-- Right CTA + Mobile Menu Toggle -->
+      <!-- Right White Pill CTA (Exact ClipCut "Get Started ↗" White Pill Button) -->
       <div class="flex items-center gap-2.5">
-        <a href="#lets-talk" class="btn-nebula px-4 py-2 rounded-[8px] text-sm font-semibold text-white inline-flex items-center gap-1.5">
+        <a href="#lets-talk" class="px-5 py-2.5 rounded-full bg-white hover:bg-neutral-100 text-[#090401] text-xs sm:text-sm font-semibold inline-flex items-center gap-2 shadow-[0_4px_18px_rgba(255,255,255,0.2)] transition-transform duration-200 hover:-translate-y-0.5">
           <span>Book a Call</span>
+          <span class="text-sm leading-none">↗</span>
         </a>
-        <button id="mobileMenuBtn" type="button" class="md:hidden p-2 rounded-lg bg-white/5 border border-white/10 text-mist-300 hover:text-white" aria-label="Toggle Menu">
+        <button id="mobileMenuBtn" type="button" class="md:hidden p-2 rounded-full bg-white/5 border border-white/10 text-mist-300 hover:text-white" aria-label="Toggle Menu">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
@@ -893,78 +851,59 @@
     </div>
 
     <!-- Mobile Nav Drawer -->
-    <div id="mobileMenuDrawer" class="hidden md:hidden bg-[#0B0A10] border-b border-white/[0.08] px-4 pt-2 pb-4 space-y-2 text-sm">
+    <div id="mobileMenuDrawer" class="hidden md:hidden mt-2 max-w-4xl mx-auto rounded-2xl bg-[#140D0A]/95 backdrop-blur-xl border border-white/[0.10] px-5 pt-3 pb-4 space-y-2 text-sm shadow-2xl">
       <a href="#home" class="mobile-nav-link block py-2 text-mist-200 hover:text-white">Home</a>
-      <a href="#results" class="mobile-nav-link block py-2 text-mist-200 hover:text-white">Results</a>
+      <a href="#about" class="mobile-nav-link block py-2 text-mist-200 hover:text-white">Services</a>
       <a href="#portfolio" class="mobile-nav-link block py-2 text-mist-200 hover:text-white">Work</a>
-      <a href="#about" class="mobile-nav-link block py-2 text-mist-200 hover:text-white">About</a>
+      <a href="#results" class="mobile-nav-link block py-2 text-mist-200 hover:text-white">Results</a>
       <a href="#why-us" class="mobile-nav-link block py-2 text-mist-200 hover:text-white">Why Me</a>
-      <a href="#lets-talk" class="mobile-nav-link block py-2 text-nebula-400 font-semibold">Book a Call</a>
+      <a href="#lets-talk" class="mobile-nav-link block py-2 text-nebula-400 font-semibold">Book a Call ↗</a>
     </div>
   </header>
 
   <main id="mainContent">
 
     <!-- ==========================================
-         1. HERO SECTION (XTRACT DARK OBSIDIAN & VIOLET GLOW)
+         1. HERO SECTION (SYMMETRIC AMBIENT GLOW & FLUTED COLUMNS)
          ========================================== -->
-    <section id="home" class="relative pt-14 pb-12 md:pt-22 md:pb-16 overflow-hidden">
-      <!-- Starfield Particle Texture + Focal Violet Orb/Ring Behind H1 -->
-      <div class="absolute inset-x-0 top-0 h-[720px] xtract-starfield pointer-events-none"></div>
+    <section id="home" class="relative -mt-20 pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden clipcut-fluted-bg">
+      <!-- Top-Center Symmetric Ambient Glow + Warm Stardust Field -->
+      <div class="clipcut-hero-sun" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-32 md:w-48 bg-gradient-to-r from-[#090401] via-[#090401]/70 to-transparent"></div>
+      <div class="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-32 md:w-48 bg-gradient-to-l from-[#090401] via-[#090401]/70 to-transparent"></div>
+      <div class="absolute inset-x-0 top-0 h-[760px] xtract-starfield pointer-events-none"></div>
       <div class="absolute inset-x-0 top-0 h-[660px] hero-ambient-aura pointer-events-none"></div>
-      <div class="xtract-hero-ring pointer-events-none" aria-hidden="true"></div>
 
       <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
         
-        <!-- 1. CLEAN CENTERED HERO STACK -->
-        <div class="text-center max-w-4xl mx-auto relative z-30 pt-2 pb-6 sm:pb-8">
+        <!-- 1. CLIPCUT CENTERED HERO STACK -->
+        <div class="text-center max-w-5xl mx-auto relative z-30 pt-2 pb-6 sm:pb-8">
 
-          <!-- Top Availability & 5-Star Eyebrow Pill -->
-          <div class="hero-stagger-1 xtract-badge shadow-[0_8px_30px_rgba(0,0,0,0.45)] mb-7">
-            <span class="xtract-badge-dot animate-pulse"></span>
-            <span class="text-amber-400 text-xs tracking-wider" aria-label="5 out of 5 stars">★★★★★</span>
-            <span class="text-xs sm:text-[13px] font-medium text-mist-200 tracking-tight">1–2 Client Spots Available</span>
+          <!-- ClipCut Top Trust Pill: ✨ Trusted by High-Ticket Experts & Founders -->
+          <div class="hero-stagger-1 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#17110E]/90 border border-white/15 shadow-[0_8px_30px_rgba(0,0,0,0.55)] mb-7">
+            <span class="text-[#E88843] text-xs" aria-hidden="true">✦</span>
+            <span class="text-xs sm:text-[13px] font-medium text-mist-100 tracking-tight">Trusted by High-Ticket Experts · 1–2 Client Spots Available</span>
           </div>
 
-          <!-- 2-Line Editorial Headline -->
-          <h1 id="heroHeadline" class="hero-stagger-2 font-display text-4xl sm:text-5xl md:text-[62px] font-bold tracking-[-0.03em] leading-[1.18] text-white text-center mx-auto drop-shadow-[0_10px_32px_rgba(0,0,0,0.9)]">
-            <span class="inline-flex items-center justify-center flex-wrap gap-x-2.5 sm:gap-x-3.5">
-              <span>Your Content</span>
-              <span class="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-[52px] md:h-[52px] rounded-2xl bg-gradient-to-br from-nebula-400 via-nebula-600 to-nebula-800 -rotate-6 shadow-[0_12px_28px_-4px_rgba(139,92,246,0.65)] border border-white/25 transition-transform duration-300 hover:rotate-0 hover:scale-105 shrink-0" aria-hidden="true">
-                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M8 5v14l11-7z"/>
-                </svg>
-              </span>
-              <span>Should Sell</span>
-            </span>
-            <span class="block text-center mt-1 sm:mt-1.5">
-              <span>Before You Ever Get </span><span class="relative inline-block"><span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#EDE9FE] to-[#A78BFA]">on the Call</span><span class="hidden md:inline-flex items-center absolute left-full top-1/2 -translate-y-1/2 ml-3 whitespace-nowrap pointer-events-none select-none">
-                  <svg class="w-3.5 h-3.5 text-[#A78BFA] -mr-0.5 -mt-4 -scale-x-100 drop-shadow" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M21 3L3 10.5l7.5 3L13.5 21 21 3z"/>
-                  </svg>
-                  <span class="px-2.5 py-1 rounded-full bg-gradient-to-r from-[#8B5CF6] to-[#6D28D9] text-white font-sans font-semibold text-[11px] tracking-normal shadow-[0_8px_22px_rgba(139,92,246,0.45)] border border-white/25">
-                    Strategy
-                  </span>
-                </span></span>
-            </span>
+          <!-- ClipCut Clean Geometric Display Headline -->
+          <h1 id="heroHeadline" class="hero-stagger-2 font-display text-4xl sm:text-5xl md:text-[56px] lg:text-[62px] font-medium tracking-[-0.035em] leading-[1.22] sm:leading-[1.2] md:leading-[1.18] text-white text-center mx-auto">
+            <span class="block">Your content should sell</span>
+            <span class="block mt-1">before you ever <span class="clipcut-text-grad">get on the call</span></span>
           </h1>
 
           <!-- Subtitle -->
-          <p id="heroSubtitle" class="hero-stagger-3 mt-6 text-base sm:text-[17px] text-[#9CA3AF] max-w-xl mx-auto leading-[1.65]">
-            I’m Alve Nabil, a content strategist for coaches, consultants, and founders who sell high-ticket. I find the message, build the system, and produce the video that turns authority into booked calls.
+          <p id="heroSubtitle" class="hero-stagger-3 mt-6 text-base sm:text-[18px] text-[#9E938E] max-w-2xl mx-auto leading-[1.6]">
+            I’m Alve Nabil, a content strategist for coaches, consultants, and founders who sell high-ticket — I find the message, build the system, and produce the video that turns authority into booked calls.
           </p>
 
-          <!-- Dual CTA Row -->
+          <!-- ClipCut Dual Pill CTA Row ("Start a Project ↗" + "See Our Works") -->
           <div class="hero-stagger-4 mt-8 flex flex-wrap items-center justify-center gap-3.5 sm:gap-4">
-            <a href="#lets-talk" class="btn-nebula hero-cta-amber inline-flex items-center gap-3 pl-2.5 pr-5 py-2.5 rounded-[8px] font-bold text-sm sm:text-base">
-              <span class="w-8 h-8 rounded-full bg-[#030305]/85 border border-white/20 flex items-center justify-center shrink-0">
-                <img src="/public/assets/alve_nabil_white.png" alt="Alve Nabil" class="w-full h-full rounded-full object-cover" />
-              </span>
+            <a href="#lets-talk" class="btn-nebula hero-cta-amber inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full font-medium text-sm sm:text-base">
               <span>Book a Strategy Call</span>
+              <span class="text-base leading-none">↗</span>
             </a>
-            <a href="#portfolio" class="btn-xtract-secondary group text-sm sm:text-base font-medium px-6 py-3.5 rounded-[8px] inline-flex items-center gap-2">
-              <span>Selected Work</span>
-              <span class="text-nebula-400 transition-transform duration-300 group-hover:translate-y-0.5">↓</span>
+            <a href="#portfolio" class="btn-xtract-secondary group text-sm sm:text-base font-medium px-7 py-3.5 rounded-full inline-flex items-center gap-2">
+              <span>See Selected Work</span>
             </a>
           </div>
 
@@ -984,18 +923,17 @@
 
         </div>
 
-        <!-- 2. HERO MAIN VSL VIDEO PLAYER WITH REFLEX EVENT-HORIZON VIOLET ARCH -->
+        <!-- 2. HERO MAIN VSL VIDEO PLAYER WITH CLIPCUT WARM EMBER ARCH -->
         <div class="hero-stagger-6 relative max-w-4xl mx-auto mt-4 sm:mt-6">
-          <!-- Reflex Glowing Semicircular Event-Horizon Arch -->
           <div class="reflex-horizon-stage" aria-hidden="true">
             <div class="reflex-horizon-outer-bloom"></div>
             <div class="reflex-horizon-ring-outer"></div>
             <div class="reflex-horizon-ring-inner"></div>
             <div class="reflex-horizon-flare"></div>
           </div>
-          <div class="xtract-bento-card relative p-2 sm:p-2.5 shadow-[0_28px_80px_-15px_rgba(109,40,217,0.32)]">
+          <div class="xtract-bento-card relative p-2 sm:p-3 shadow-[0_28px_80px_-15px_rgba(212,72,44,0.34)]">
             <!-- Embedded YouTube Hero Video (https://youtu.be/tsfGoDuyhV0) -->
-            <div class="relative aspect-video rounded-[12px] sm:rounded-[14px] bg-[#05040A] overflow-hidden group transition-all duration-300 ease-out shadow-[0_12px_32px_-8px_rgba(0,0,0,0.65)] has-[#heroVslCenterOverlay:hover]:scale-[1.018] has-[#heroVslCenterOverlay:hover]:shadow-[0_24px_64px_-8px_rgba(139,92,246,0.55)] has-[#heroVslCenterOverlay:hover]:ring-1 has-[#heroVslCenterOverlay:hover]:ring-nebula-400/50" id="heroVslViewport">
+            <div class="relative aspect-video rounded-[14px] sm:rounded-[16px] bg-[#090401] overflow-hidden group transition-all duration-300 ease-out shadow-[0_12px_32px_-8px_rgba(0,0,0,0.65)] has-[#heroVslCenterOverlay:hover]:scale-[1.018] has-[#heroVslCenterOverlay:hover]:shadow-[0_24px_64px_-8px_rgba(217,81,48,0.58)] has-[#heroVslCenterOverlay:hover]:ring-1 has-[#heroVslCenterOverlay:hover]:ring-nebula-400/50" id="heroVslViewport">
               <iframe
                 id="heroYoutubeIframe"
                 class="w-full h-full border-0"
@@ -1007,18 +945,18 @@
               </iframe>
 
               <!-- Custom Frosted Cover Overlay -->
-              <div id="heroVslCenterOverlay" class="absolute inset-0 flex flex-col justify-between p-3.5 sm:p-4 bg-black/45 backdrop-blur-[1px] cursor-pointer transition-all duration-300" style="background-image: linear-gradient(to bottom, rgba(4,5,10,0.58), rgba(4,5,10,0.22), rgba(4,5,10,0.84)), url('https://i.ytimg.com/vi/tsfGoDuyhV0/maxresdefault.jpg'); background-size: cover; background-position: center;">
+              <div id="heroVslCenterOverlay" class="absolute inset-0 flex flex-col justify-between p-3.5 sm:p-4 bg-black/45 backdrop-blur-[1px] cursor-pointer transition-all duration-300" style="background-image: linear-gradient(to bottom, rgba(9,4,1,0.58), rgba(9,4,1,0.22), rgba(9,4,1,0.86)), url('https://i.ytimg.com/vi/tsfGoDuyhV0/maxresdefault.jpg'); background-size: cover; background-position: center;">
                 <div class="flex items-center justify-between gap-2">
-                  <div class="flex items-center gap-2 px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/15 text-xs font-medium text-slate-200">
+                  <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/15 text-xs font-medium text-mist-100">
                     <img src="/public/assets/alve_nabil_white.png" alt="Alve Nabil" class="w-4 h-4 rounded-full object-cover" />
                     <span id="heroVslBadgeText">Alve Nabil</span>
                   </div>
                   <div class="flex items-center gap-1.5">
-                    <span class="px-2.5 py-1 rounded-full bg-rose-500/90 text-[10px] font-bold text-white shadow inline-flex items-center gap-1">
+                    <span class="px-2.5 py-1 rounded-full bg-[#D95130] text-[10px] font-bold text-white shadow inline-flex items-center gap-1">
                       <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
                       <span>VSL</span>
                     </span>
-                    <a href="https://youtu.be/tsfGoDuyhV0" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();" class="px-2.5 py-1 rounded-full bg-black/70 hover:bg-black/90 hover:border-nebula-300/60 backdrop-blur-md border border-white/15 text-[10px] font-semibold text-white transition inline-flex items-center gap-1">
+                    <a href="https://youtu.be/tsfGoDuyhV0" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();" class="px-2.5 py-1 rounded-full bg-black/75 hover:bg-black/90 hover:border-nebula-300/60 backdrop-blur-md border border-white/15 text-[10px] font-semibold text-white transition inline-flex items-center gap-1">
                       <span>YouTube</span>
                       <span>↗</span>
                     </a>
@@ -1026,19 +964,62 @@
                 </div>
 
                 <div class="my-auto flex items-center justify-center">
-                  <div class="w-14 h-14 sm:w-18 sm:h-18 rounded-2xl bg-black/55 hover:bg-black/70 backdrop-blur-md border border-nebula-400/50 flex items-center justify-center shadow-[0_0_40px_rgba(139,92,246,0.45)] group-hover:scale-105 transition-transform">
-                    <svg id="heroVslPlayIcon" class="w-7 h-7 sm:w-8 sm:h-8 text-nebula-200 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                  <div class="w-14 h-14 sm:w-18 sm:h-18 rounded-2xl bg-[#D95130]/85 hover:bg-[#D95130] backdrop-blur-md border border-nebula-200/60 flex items-center justify-center shadow-[0_0_40px_rgba(217,81,48,0.65)] group-hover:scale-105 transition-transform">
+                    <svg id="heroVslPlayIcon" class="w-7 h-7 sm:w-8 sm:h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z"/>
                     </svg>
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between text-[11px] sm:text-xs text-slate-200 bg-black/65 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/10">
+                <div class="flex items-center justify-between text-[11px] sm:text-xs text-mist-100 bg-black/70 backdrop-blur-md px-3.5 py-2 rounded-xl border border-white/10">
                   <span class="font-medium">Click to play strategy breakdown</span>
-                  <span class="font-mono text-nebula-300">youtu.be/tsfGoDuyhV0</span>
+                  <span class="font-mono text-nebula-300">HD · Strategy Overview</span>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <!-- 3. CLIPCUT 4-COLUMN METRIC BENTO CARDS (Exact ClipCut "How We Fix It" Stat Row Layout) -->
+        <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+          <div class="xtract-bento-card p-6 sm:p-7 flex flex-col justify-between min-h-[230px]">
+            <div>
+              <div class="text-sm font-medium text-mist-200">Avg. Retention Rate</div>
+              <div class="mt-3 font-display text-5xl sm:text-[54px] font-normal tracking-tight clipcut-number-grad">75%+</div>
+            </div>
+            <p class="mt-6 text-xs sm:text-sm text-mist-400 leading-relaxed">
+              Hook-driven authority edits that keep high-ticket buyers watching past the first 3 seconds.
+            </p>
+          </div>
+
+          <div class="xtract-bento-card p-6 sm:p-7 flex flex-col justify-between min-h-[230px]">
+            <div>
+              <div class="text-sm font-medium text-mist-200">Videos Produced</div>
+              <div class="mt-3 font-display text-5xl sm:text-[54px] font-normal tracking-tight clipcut-number-grad">200+</div>
+            </div>
+            <p class="mt-6 text-xs sm:text-sm text-mist-400 leading-relaxed">
+              From high-ticket coaches to B2B founders — strategy-first videos delivered on time.
+            </p>
+          </div>
+
+          <div class="xtract-bento-card p-6 sm:p-7 flex flex-col justify-between min-h-[230px]">
+            <div>
+              <div class="text-sm font-medium text-mist-200">Follower Growth Scale</div>
+              <div class="mt-3 font-display text-5xl sm:text-[54px] font-normal tracking-tight clipcut-number-grad">34X</div>
+            </div>
+            <p class="mt-6 text-xs sm:text-sm text-mist-400 leading-relaxed">
+              Scaled client accounts from 1,000 to 34,000+ followers with inbound consultation funnels.
+            </p>
+          </div>
+
+          <div class="xtract-bento-card p-6 sm:p-7 flex flex-col justify-between min-h-[230px]">
+            <div>
+              <div class="text-sm font-medium text-mist-200">Dedicated Client Focus</div>
+              <div class="mt-3 font-display text-5xl sm:text-[54px] font-normal tracking-tight clipcut-number-grad">1–2</div>
+            </div>
+            <p class="mt-6 text-xs sm:text-sm text-mist-400 leading-relaxed">
+              I only take 1–2 clients at a time so your offer positioning and content system get real attention.
+            </p>
           </div>
         </div>
 
@@ -1046,43 +1027,91 @@
     </section>
 
     <!-- ==========================================
-         2. ABOUT US SECTION + DUAL MARQUEES
+         2. ABOUT US / SERVICES SECTION (CLIPCUT "MORE CONTENT, LESS CHAOS" SPLIT + DUAL MARQUEES)
          ========================================== -->
-    <section id="about" class="pt-4 pb-12 md:pt-6 md:pb-16 relative overflow-hidden">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
-        <!-- Dark Pill Badge with Violet Accent Dot -->
-        <div class="xtract-badge mb-6">
-          <span class="xtract-badge-dot"></span>
-          <span>Meet Your Strategist</span>
-        </div>
+    <section id="about" class="py-12 md:py-20 relative overflow-hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <!-- ClipCut Fluted Ember Split Container -->
+        <div class="xtract-bento-card diagonal-rays p-6 sm:p-10 md:p-14 relative overflow-hidden top-border-glow">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <!-- Left Column: Eyebrow + Statement + Primary Ember Pill CTA -->
+            <div class="lg:col-span-6 space-y-6 text-left">
+              <div class="xtract-badge">
+                <span>Meet Your Strategist</span>
+              </div>
 
-        <!-- Scroll-Reveal Text Statement (Exact Strategist-First Copy Deck Text) -->
-        <h2 id="aboutRevealText" class="font-display text-xl sm:text-2xl md:text-[30px] font-bold leading-[1.38] tracking-tight max-w-4xl mx-auto">
-          <span class="text-white">I’m Alve Nabil, a content strategist who also happens to edit. I’ve produced 200+ videos and helped creators grow 40K followers from zero, so I know what holds attention and what moves a buyer to act.</span>
-          <span class="text-mist-400 transition-colors duration-500" id="aboutRevealSecondHalf"> I start with your offer and your audience, find the ideas worth building authority on, then handle the hooks, the edit, the motion, and the call to action. You record. I run the system.</span>
-        </h2>
+              <h2 class="font-display text-3xl sm:text-4xl md:text-[46px] font-medium tracking-[-0.03em] leading-[1.22] sm:leading-[1.2] md:leading-[1.18] text-white">
+                Strategy first,<br />
+                <span class="clipcut-text-grad">Authority that converts</span>
+              </h2>
 
-        <div class="mt-8">
-          <a href="#lets-talk" class="btn-nebula inline-flex items-center justify-center px-7 py-3.5 rounded-[8px] font-semibold text-sm sm:text-base text-white">
-            Book a Strategy Call
-          </a>
+              <!-- Scroll-Reveal Text Statement (Exact Strategist-First Copy Deck Text) -->
+              <p id="aboutRevealText" class="text-sm sm:text-base md:text-[17px] leading-[1.65] text-mist-200">
+                <span class="text-white font-medium">I’m Alve Nabil, a content strategist who also happens to edit. I’ve produced 200+ videos and helped creators grow 40K followers from zero, so I know what holds attention and what moves a buyer to act.</span>
+                <span class="text-mist-400 transition-colors duration-500" id="aboutRevealSecondHalf"> I start with your offer and your audience, find the ideas worth building authority on, then handle the hooks, the edit, the motion, and the call to action. You record. I run the system.</span>
+              </p>
+
+              <div class="pt-2">
+                <a href="#lets-talk" class="btn-nebula inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-medium text-sm sm:text-base text-white">
+                  <span>Book a Strategy Call</span>
+                  <span>↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Column: 3 Stacked ClipCut Feature Cards -->
+            <div class="lg:col-span-6 space-y-4">
+              <div class="rounded-2xl bg-[#0B0604]/90 border border-white/[0.08] p-5 sm:p-6 relative overflow-hidden">
+                <div class="absolute -top-10 -left-10 w-36 h-36 rounded-full bg-nebula-500/20 blur-2xl pointer-events-none"></div>
+                <div class="flex items-center gap-3 pb-3 mb-3 border-b border-white/[0.07]">
+                  <span class="w-8 h-8 rounded-full bg-gradient-to-br from-[#E88843] to-[#D4482C] flex items-center justify-center text-white text-xs font-bold shadow">01</span>
+                  <h3 class="font-display text-lg sm:text-xl font-medium text-white">Positioning &amp; Hook Architecture</h3>
+                </div>
+                <p class="text-xs sm:text-sm text-mist-400 leading-relaxed">
+                  Before a single frame is cut, we map your buyer objections, high-ticket angles, and 3-second retention hooks.
+                </p>
+              </div>
+
+              <div class="rounded-2xl bg-[#0B0604]/90 border border-white/[0.08] p-5 sm:p-6 relative overflow-hidden">
+                <div class="absolute -top-10 -left-10 w-36 h-36 rounded-full bg-nebula-500/20 blur-2xl pointer-events-none"></div>
+                <div class="flex items-center gap-3 pb-3 mb-3 border-b border-white/[0.07]">
+                  <span class="w-8 h-8 rounded-full bg-gradient-to-br from-[#E88843] to-[#D4482C] flex items-center justify-center text-white text-xs font-bold shadow">02</span>
+                  <h3 class="font-display text-lg sm:text-xl font-medium text-white">Restrained Executive Production</h3>
+                </div>
+                <p class="text-xs sm:text-sm text-mist-400 leading-relaxed">
+                  Clean pacing, custom UI proof callouts, and 4K color grading built to earn trust from serious buyers.
+                </p>
+              </div>
+
+              <div class="rounded-2xl bg-[#0B0604]/90 border border-white/[0.08] p-5 sm:p-6 relative overflow-hidden">
+                <div class="absolute -top-10 -left-10 w-36 h-36 rounded-full bg-nebula-500/20 blur-2xl pointer-events-none"></div>
+                <div class="flex items-center gap-3 pb-3 mb-3 border-b border-white/[0.07]">
+                  <span class="w-8 h-8 rounded-full bg-gradient-to-br from-[#E88843] to-[#D4482C] flex items-center justify-center text-white text-xs font-bold shadow">03</span>
+                  <h3 class="font-display text-lg sm:text-xl font-medium text-white">Zero-Friction Consultation System</h3>
+                </div>
+                <p class="text-xs sm:text-sm text-mist-400 leading-relaxed">
+                  You drop raw recordings into a folder. I deliver ready-to-publish authority assets engineered to book calls.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Dual Visual Showcase Marquee Rows (Perfume Bottle, Woman Zoom Shot, Villa, Man Wearing Glasses, Car Front, Scent Bottle, Woman In Garden, Man And A Car, etc.) -->
-      <div class="mt-14 space-y-4 edge-fade-mask overflow-hidden">
+      <!-- Dual Visual Showcase Marquee Rows (Including Inline YouTube Video Cards: E-com Product, Talking Head, E-Com) -->
+      <div class="mt-12 space-y-4 edge-fade-mask overflow-hidden">
         <div id="aboutMarqueeRow1" class="animate-marquee-left gap-4"></div>
         <div id="aboutMarqueeRow2" class="animate-marquee-right gap-4"></div>
       </div>
     </section>
 
     <!-- ==========================================
-         3. CREDIBILITY / TRUSTED BY SECTION
+         3. CREDIBILITY / CLIENT RESULTS SECTION
          ========================================== -->
     <section id="results" class="py-10 md:py-20 px-2 sm:px-6">
       <div class="max-w-6xl mx-auto xtract-bento-card diagonal-rays px-0 py-6 sm:py-10 md:py-14 relative overflow-hidden top-border-glow">
         
-        <!-- Exact Semicircular Full-Color Creator Wheel Surrounding Center "Credibility / Trusted By" Header (Full-Frame + Smooth Edge Fade) -->
+        <!-- Semicircular Full-Color Creator Wheel Surrounding Center "Client Results" Header -->
         <div class="relative w-full">
           <div class="arc-stage-cred">
             <div id="credibilityCreatorMarquee" class="arc-wheel-pivot">
@@ -1090,28 +1119,28 @@
             </div>
 
             <!-- Soft Left, Right & Bottom Edge Fade Overlays for Full-Frame Seamless Blend -->
-            <div class="pointer-events-none absolute inset-y-0 left-0 w-10 sm:w-16 md:w-24 bg-gradient-to-r from-[#0B0A10] via-[#0B0A10]/80 to-transparent z-10"></div>
-            <div class="pointer-events-none absolute inset-y-0 right-0 w-10 sm:w-16 md:w-24 bg-gradient-to-l from-[#0B0A10] via-[#0B0A10]/80 to-transparent z-10"></div>
-            <div class="pointer-events-none absolute inset-x-0 bottom-0 h-20 sm:h-28 bg-gradient-to-t from-[#0B0A10] via-[#0B0A10]/85 to-transparent z-10"></div>
+            <div class="pointer-events-none absolute inset-y-0 left-0 w-10 sm:w-16 md:w-24 bg-gradient-to-r from-[#110B08] via-[#110B08]/80 to-transparent z-10"></div>
+            <div class="pointer-events-none absolute inset-y-0 right-0 w-10 sm:w-16 md:w-24 bg-gradient-to-l from-[#110B08] via-[#110B08]/80 to-transparent z-10"></div>
+            <div class="pointer-events-none absolute inset-x-0 bottom-0 h-20 sm:h-28 bg-gradient-to-t from-[#110B08] via-[#110B08]/85 to-transparent z-10"></div>
 
             <!-- Section Header Positioned Inside the Semicircular Arc Hollow -->
             <div id="credibilityHeaderBlock" class="absolute inset-x-0 bottom-4 sm:bottom-6 z-20 text-center max-w-xl mx-auto px-4">
               <div class="xtract-badge mb-4 shadow-lg">
-                <span class="xtract-badge-dot"></span>
-                <span>Credibility.</span>
+                <span>Client Results</span>
               </div>
 
-              <h2 class="font-display text-3xl sm:text-4xl md:text-[44px] font-bold tracking-tight text-white leading-[1.14]">
+              <h2 class="font-display text-3xl sm:text-4xl md:text-[52px] font-medium tracking-[-0.03em] text-white leading-[1.22] sm:leading-[1.2] md:leading-[1.18]">
                 Trusted by Experts<br />
-                Who Sell on Trust
+                <span class="clipcut-text-grad">Who Sell on Trust</span>
               </h2>
               <p class="mt-4 text-xs sm:text-sm text-mist-400 max-w-md mx-auto leading-relaxed">
                 Strategy and execution behind content that builds authority and starts sales conversations.
               </p>
 
               <div class="mt-6">
-                <a href="#lets-talk" class="btn-nebula inline-flex items-center justify-center px-6 py-3 rounded-[8px] font-semibold text-xs sm:text-sm text-white">
-                  Book a Strategy Call
+                <a href="#lets-talk" class="btn-nebula inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-medium text-xs sm:text-sm text-white">
+                  <span>Book a Strategy Call</span>
+                  <span>↗</span>
                 </a>
               </div>
             </div>
@@ -1133,28 +1162,17 @@
         <!-- Header + Case Study Switcher -->
         <div class="text-center max-w-3xl mx-auto">
           <div class="xtract-badge mb-4">
-            <span class="xtract-badge-dot"></span>
             <span>Case Study</span>
           </div>
 
-          <h2 id="caseStudyHeadline" class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-white">
+          <h2 id="caseStudyHeadline" class="font-display text-3xl sm:text-5xl md:text-[58px] font-medium tracking-[-0.03em] leading-[1.22] sm:leading-[1.2] md:leading-[1.18] text-white">
             1K to 34,000 Followers<br />
-            <span class="text-mist-200">The Strategy Behind It</span><br />
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F3F4F6] via-[#DDD6FE] to-[#A78BFA]">Not Luck. A System.</span>
+            <span class="text-mist-200">Consultation Funnel System</span><br />
+            <span class="clipcut-text-grad">Built for Lex Corporation.</span>
           </h2>
           <p id="caseStudySub" class="mt-4 text-sm sm:text-base text-mist-400 max-w-2xl mx-auto">
-            Mohammad in Poland (Business Consultant at Lex Corporation) had real expertise and no traction. I rebuilt the strategy first (positioning, hooks, content angles), then the edits. Here’s what changed.
+            By pairing bilingual authority positioning with high-retention short-form edits, we grew Mohammad in Poland from 1K to 34K followers and turned organic viewers into booked consultations.
           </p>
-
-          <!-- Case Study Switcher Pills -->
-          <div class="mt-5 inline-flex rounded-[10px] bg-[#0B0A10] p-1 border border-white/[0.08] text-xs">
-            <button id="csBtnDev" type="button" class="px-3.5 py-1.5 rounded-[8px] font-semibold bg-nebula-600 text-white transition">
-              1K to 34,000 Followers (System Breakdown)
-            </button>
-            <button id="csBtnAlve" type="button" class="px-3.5 py-1.5 rounded-[8px] font-medium text-mist-400 hover:text-white transition">
-              Mohammad in Poland (1K → 34K Case)
-            </button>
-          </div>
         </div>
 
         <!-- Before / After Profile Comparison Cards (Premium 3:4 Portrait Showcase) -->
@@ -1168,14 +1186,14 @@
             <!-- Top Header & Metric Summary -->
             <div class="relative z-10">
               <div class="flex items-center justify-between gap-2 pb-4 border-b border-white/[0.07]">
-                <span class="px-2.5 py-1 rounded-md bg-white/[0.05] border border-white/10 text-[10px] font-mono font-semibold uppercase tracking-widest text-mist-300">Before</span>
+                <span class="px-2.5 py-1 rounded-full bg-white/[0.05] border border-white/10 text-[10px] font-mono font-semibold uppercase tracking-widest text-mist-300">Before</span>
                 <span id="csBeforeLabel" class="text-xs font-medium text-mist-400">Before Working With Alve Nabil</span>
               </div>
 
               <div class="mt-4 flex items-end justify-between">
                 <div>
                   <div class="text-[11px] font-medium uppercase tracking-wider text-mist-400">Audience Baseline</div>
-                  <div class="mt-0.5 font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight tabular-nums">1,000 <span class="text-sm font-medium text-mist-400">Followers</span></div>
+                  <div class="mt-0.5 font-display text-3xl sm:text-4xl font-semibold text-white tracking-tight tabular-nums">1,000 <span class="text-sm font-medium text-mist-400">Followers</span></div>
                 </div>
                 <span class="text-xs font-mono text-mist-400 bg-white/[0.04] border border-white/[0.08] px-2.5 py-1 rounded-lg">Low Inbound Reach</span>
               </div>
@@ -1185,7 +1203,7 @@
             </div>
 
             <!-- Middle Framed Profile Proof Window (Actual 1K Follower Profile Screenshot) -->
-            <div class="relative z-10 my-3 rounded-2xl p-2.5 bg-[#06050B]/90 border border-white/10 shadow-[0_16px_36px_rgba(0,0,0,0.65)]">
+            <div class="relative z-10 my-3 rounded-2xl p-2.5 bg-[#090401]/90 border border-white/10 shadow-[0_16px_36px_rgba(0,0,0,0.65)]">
               <div class="flex items-center justify-between px-2 pb-2 mb-2 border-b border-white/[0.06] text-[10px] font-mono text-mist-400">
                 <div class="flex items-center gap-1.5">
                   <span class="w-2 h-2 rounded-full bg-white/20"></span>
@@ -1219,7 +1237,7 @@
           <!-- CENTER TRANSFORMATION CONNECTOR -->
           <div class="lg:col-span-1 flex flex-col items-center justify-center py-2">
             <div class="hidden lg:block w-px h-20 bg-gradient-to-b from-transparent via-nebula-500/45 to-nebula-500"></div>
-            <div class="w-12 h-12 rounded-2xl btn-nebula flex items-center justify-center text-white font-bold shadow-[0_0_28px_rgba(139,92,246,0.55)] my-2.5 border border-white/20">
+            <div class="w-12 h-12 rounded-2xl btn-nebula flex items-center justify-center text-white font-bold shadow-[0_0_28px_rgba(217,81,48,0.55)] my-2.5 border border-white/20">
               <span class="text-base">→</span>
             </div>
             <div class="text-center px-2.5 py-1.5 rounded-xl bg-white/[0.03] border border-white/[0.08]">
@@ -1230,33 +1248,33 @@
             <div class="hidden lg:block w-px h-20 bg-gradient-to-t from-transparent via-nebula-500/45 to-nebula-500 mt-2.5"></div>
           </div>
 
-          <!-- AFTER CARD (3:4 Ratio, Featured Violet Glow) -->
+          <!-- AFTER CARD (3:4 Ratio, Featured Ember Glow) -->
           <div class="lg:col-span-5 w-full max-w-[390px] mx-auto aspect-[3/4] xtract-bento-card xtract-bento-card-featured p-6 sm:p-7 relative flex flex-col justify-between overflow-hidden group">
-            <!-- Ambient Violet Focal Spotlight -->
+            <!-- Ambient Ember Focal Spotlight -->
             <div class="pointer-events-none absolute -top-24 -right-20 w-64 h-64 rounded-full bg-nebula-500/20 blur-3xl"></div>
             <div class="pointer-events-none absolute -bottom-24 -left-20 w-56 h-56 rounded-full bg-nebula-600/15 blur-3xl"></div>
 
             <!-- Top Header & 34K Metric Readout -->
             <div class="relative z-10">
               <div class="flex items-center justify-between gap-2 pb-4 border-b border-nebula-500/25">
-                <span class="px-2.5 py-1 rounded-md bg-nebula-500/20 border border-nebula-400/40 text-[10px] font-mono font-semibold uppercase tracking-widest text-nebula-200 shadow-[0_0_16px_rgba(139,92,246,0.3)]">After</span>
+                <span class="px-2.5 py-1 rounded-md bg-nebula-500/20 border border-nebula-400/40 text-[10px] font-mono font-semibold uppercase tracking-widest text-nebula-200 shadow-[0_0_16px_rgba(217,81,48,0.3)]">After</span>
                 <span id="csAfterLabel" class="text-xs font-medium text-mist-200">After Working With Alve Nabil</span>
               </div>
 
               <div class="mt-4 flex items-end justify-between">
                 <div>
                   <div class="text-[11px] font-medium uppercase tracking-wider text-nebula-300">Authority Scale</div>
-                  <div class="mt-0.5 font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight tabular-nums">34,000 <span class="text-sm font-medium text-nebula-200">Followers</span></div>
+                  <div class="mt-0.5 font-display text-3xl sm:text-4xl font-semibold text-white tracking-tight tabular-nums">34,000 <span class="text-sm font-medium text-nebula-200">Followers</span></div>
                 </div>
                 <span class="text-xs font-mono font-semibold text-nebula-200 bg-nebula-500/20 border border-nebula-400/35 px-2.5 py-1 rounded-lg">+3,300% Growth</span>
               </div>
               <div class="mt-3 w-full h-1.5 rounded-full bg-white/[0.08] overflow-hidden">
-                <div class="h-full w-full rounded-full bg-gradient-to-r from-nebula-500 via-nebula-400 to-fuchsia-400 shadow-[0_0_12px_rgba(139,92,246,0.8)]"></div>
+                <div class="h-full w-full rounded-full bg-gradient-to-r from-[#D95130] via-[#ED795C] to-[#E88843] shadow-[0_0_12px_rgba(217,81,48,0.8)]"></div>
               </div>
             </div>
 
             <!-- Middle Framed Profile Proof Window (Actual 34K Follower Profile Screenshot) -->
-            <div class="relative z-10 my-3 rounded-2xl p-2.5 bg-[#080612]/95 border border-nebula-400/35 shadow-[0_18px_40px_rgba(109,40,217,0.28)]">
+            <div class="relative z-10 my-3 rounded-2xl p-2.5 bg-[#090401]/95 border border-nebula-400/35 shadow-[0_18px_40px_rgba(212,72,44,0.28)]">
               <div class="flex items-center justify-between px-2 pb-2 mb-2 border-b border-nebula-500/20 text-[10px] font-mono text-nebula-200">
                 <div class="flex items-center gap-1.5">
                   <span class="w-2 h-2 rounded-full bg-nebula-400"></span>
@@ -1291,32 +1309,38 @@
 
         <!-- Strategy Breakdown 2-Column Card -->
         <div class="mt-10 xtract-bento-card p-6 sm:p-8 md:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center top-border-glow">
-          <!-- Left 16:9 Playable Breakdown Video -->
-          <div class="lg:col-span-7 relative rounded-2xl overflow-hidden bg-[#05040A] border border-white/[0.08] aspect-video group cursor-pointer" id="csVideoContainer">
-            <canvas id="csBreakdownCanvas" width="640" height="360" class="w-full h-full object-cover"></canvas>
-            <div id="csVideoCenterOverlay" class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/15 transition">
-              <div class="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center shadow-[0_0_32px_rgba(139,92,246,0.35)] group-hover:scale-105 transition-transform">
+          <!-- Left 16:9 Real Playable Strategy Breakdown Video -->
+          <div class="lg:col-span-7 relative rounded-2xl overflow-hidden bg-[#090401] border border-white/[0.08] aspect-video group cursor-pointer" data-youtube-id="uv-UynNRN1M" data-youtube-title="Mohammad in Poland — Consultation Funnel & Positioning Breakdown">
+            <img src="https://i.ytimg.com/vi/uv-UynNRN1M/hqdefault.jpg" alt="Mohammad in Poland Strategy Breakdown" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-95 group-hover:scale-[1.02] transition-all duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/65 pointer-events-none"></div>
+            <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between text-[11px] z-10">
+              <span class="px-2.5 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/15 text-mist-100 font-medium">@mohammadinpoland · Case Study Breakdown</span>
+              <a href="https://youtu.be/uv-UynNRN1M" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();" class="px-2.5 py-1 rounded-full bg-black/75 hover:bg-black/95 border border-white/15 text-white font-semibold transition">YouTube ↗</a>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+              <div class="w-14 h-14 rounded-2xl bg-[#D95130]/90 backdrop-blur-md border border-white/25 flex items-center justify-center shadow-[0_0_32px_rgba(217,81,48,0.45)] group-hover:scale-105 transition-transform">
                 <svg class="w-6 h-6 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
               </div>
             </div>
-            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent px-4 py-2.5 flex items-center justify-between text-xs">
-              <span id="csVideoTime" class="font-mono text-mist-200">0:00 / 3:12</span>
-              <span id="csVideoSpeed" class="px-2 py-0.5 rounded bg-white/10 text-white font-semibold border border-white/10">1×</span>
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/95 to-transparent px-4 py-3 flex items-center justify-between text-xs z-10">
+              <span class="font-medium text-mist-200">Click to play case study breakdown inline</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-white/10 text-nebula-200 font-mono text-[11px] border border-white/10">1K → 34K System</span>
             </div>
           </div>
 
           <!-- Right Strategy Copy (Exact Video Block from Copy Deck) -->
           <div class="lg:col-span-5 space-y-4">
-            <h3 class="font-display text-2xl sm:text-3xl font-extrabold leading-tight text-white">
+            <h3 class="font-display text-2xl sm:text-3xl font-medium leading-tight text-white">
               See the Strategy Behind the Results<br />
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F3F4F6] via-[#DDD6FE] to-[#A78BFA]">Full Breakdown</span>
+              <span class="clipcut-text-grad">Full Breakdown</span>
             </h3>
             <p class="text-sm sm:text-base text-mist-400 leading-relaxed">
               Exactly what I changed, why it worked, and how it applies to your offer.
             </p>
             <div class="pt-2">
-              <a href="#lets-talk" class="btn-nebula inline-flex items-center justify-center px-6 py-3 rounded-[8px] font-semibold text-sm text-white">
-                Book a Strategy Call
+              <a href="#lets-talk" class="btn-nebula inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-medium text-sm text-white">
+                <span>Book a Strategy Call</span>
+                <span class="text-xs opacity-90">↗</span>
               </a>
             </div>
             <div class="pt-2 flex items-center gap-2.5 text-xs text-mist-300">
@@ -1338,13 +1362,12 @@
       <div class="max-w-6xl mx-auto xtract-bento-card diagonal-rays p-6 sm:p-10 md:p-14 relative overflow-hidden top-border-glow">
         <div class="text-center max-w-2xl mx-auto">
           <div class="xtract-badge mb-4">
-            <span class="xtract-badge-dot"></span>
             <span>Selected Work</span>
           </div>
 
-          <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          <h2 class="font-display text-3xl sm:text-4xl md:text-[50px] font-medium tracking-[-0.035em] text-white leading-[1.22] sm:leading-[1.2] md:leading-[1.18]">
             Strategy You Can See<br />
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F3F4F6] via-[#DDD6FE] to-[#A78BFA]">Every Frame Is Built to Build Trust</span>
+            <span class="clipcut-text-grad">Every Frame Is Built to Build Trust</span>
           </h2>
           <p id="portfolioSubtitle" class="mt-4 text-sm sm:text-base text-mist-400">
             Premium, restrained edits for experts who would rather be trusted than just noticed.
@@ -1352,10 +1375,10 @@
 
           <!-- Interactive Filter Pills for the 6 Viral Reels -->
           <div class="mt-6 flex flex-wrap items-center justify-center gap-2" id="portfolioFilterBar">
-            <button type="button" data-filter="all" class="portfolio-filter-btn px-3.5 py-1.5 rounded-[8px] text-xs font-semibold bg-nebula-600 text-white transition">All 6 Showcases</button>
-            <button type="button" data-filter="retention" class="portfolio-filter-btn px-3.5 py-1.5 rounded-[8px] text-xs font-medium btn-xtract-secondary transition">High-Retention Talking Head</button>
-            <button type="button" data-filter="motion" class="portfolio-filter-btn px-3.5 py-1.5 rounded-[8px] text-xs font-medium btn-xtract-secondary transition">Motion Graphics & UI</button>
-            <button type="button" data-filter="b2b" class="portfolio-filter-btn px-3.5 py-1.5 rounded-[8px] text-xs font-medium btn-xtract-secondary transition">B2B Coaches & Funnels</button>
+            <button type="button" data-filter="all" class="portfolio-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-nebula-600 text-white transition">All 6 Showcases</button>
+            <button type="button" data-filter="retention" class="portfolio-filter-btn px-4 py-2 rounded-full text-xs font-medium btn-xtract-secondary transition">High-Retention Talking Head</button>
+            <button type="button" data-filter="motion" class="portfolio-filter-btn px-4 py-2 rounded-full text-xs font-medium btn-xtract-secondary transition">Motion Graphics &amp; UI</button>
+            <button type="button" data-filter="b2b" class="portfolio-filter-btn px-4 py-2 rounded-full text-xs font-medium btn-xtract-secondary transition">B2B Coaches &amp; Funnels</button>
           </div>
         </div>
 
@@ -1365,61 +1388,64 @@
         </div>
 
         <div class="mt-10 text-center">
-          <a href="#lets-talk" class="btn-nebula inline-flex items-center justify-center px-7 py-3.5 rounded-[8px] font-semibold text-sm sm:text-base text-white">
-            Book a Strategy Call
+          <a href="#lets-talk" class="btn-nebula inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-medium text-sm sm:text-base text-white">
+            <span>Book a Strategy Call</span>
+            <span class="text-xs opacity-90">↗</span>
           </a>
         </div>
       </div>
     </section>
 
     <!-- ==========================================
-         6. COMPARISON SECTION ("SMOOTHSINC VS. THE REST")
+         6. COMPARISON SECTION ("A STRATEGIST VS. AN EDITOR")
          ========================================== -->
     <section id="why-us" class="py-16 md:py-24 px-4 sm:px-6">
       <div class="max-w-5xl mx-auto">
         <div class="text-center max-w-2xl mx-auto relative">
           <div class="xtract-badge mb-4">
-            <span class="xtract-badge-dot"></span>
             <span>The Difference</span>
           </div>
 
-          <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          <h2 class="font-display text-3xl sm:text-4xl md:text-[50px] font-medium tracking-[-0.035em] text-white leading-[1.22] sm:leading-[1.2] md:leading-[1.18]">
             <span id="compHeadlineBrand">A Strategist</span> vs. An Editor<br />
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F3F4F6] via-[#DDD6FE] to-[#A78BFA]">Where the Difference Shows Up in Your Pipeline</span>
+            <span class="clipcut-text-grad">Where the Difference Shows Up in Your Pipeline</span>
           </h2>
           <p class="mt-4 text-sm sm:text-base text-mist-400">
             An editor delivers files. A strategist delivers outcomes. Here’s the gap.
           </p>
         </div>
 
-        <!-- 2-Column Comparison Container -->
-        <div class="mt-12 xtract-bento-card p-6 sm:p-8 md:p-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+        <!-- 2-Column Comparison Container (ClipCut Side-by-Side Comparison Card Style) -->
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
           
           <!-- Left Column (editor only) -->
-          <div class="p-4 sm:p-6 flex flex-col justify-between">
+          <div class="xtract-bento-card p-6 sm:p-8 flex flex-col justify-between bg-[#100A07]/90">
             <div>
-              <div class="text-lg font-display font-bold text-mist-400 mb-6 pb-3 border-b border-white/10">
-                An Editor (Editor Only)
+              <div class="flex items-center justify-between mb-6 pb-4 border-b border-white/[0.08]">
+                <div class="text-lg font-display font-medium text-mist-300">
+                  An Editor (Editor Only)
+                </div>
+                <span class="px-2.5 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-[10px] font-mono uppercase tracking-wider text-mist-400">Standard</span>
               </div>
               <ul class="space-y-4 text-sm sm:text-base text-mist-400">
                 <li class="flex items-center gap-3">
-                  <span class="w-6 h-6 rounded-full bg-red-500/15 border border-red-500/40 flex items-center justify-center text-red-400 shrink-0">✕</span>
+                  <span class="w-6 h-6 rounded-full bg-white/[0.05] border border-white/[0.12] flex items-center justify-center text-mist-400 shrink-0 text-xs">✕</span>
                   <span>Takes Your Footage, Returns a Video</span>
                 </li>
                 <li class="flex items-center gap-3">
-                  <span class="w-6 h-6 rounded-full bg-red-500/15 border border-red-500/40 flex items-center justify-center text-red-400 shrink-0">✕</span>
+                  <span class="w-6 h-6 rounded-full bg-white/[0.05] border border-white/[0.12] flex items-center justify-center text-mist-400 shrink-0 text-xs">✕</span>
                   <span>No Strategy, No Positioning</span>
                 </li>
                 <li class="flex items-center gap-3">
-                  <span class="w-6 h-6 rounded-full bg-red-500/15 border border-red-500/40 flex items-center justify-center text-red-400 shrink-0">✕</span>
+                  <span class="w-6 h-6 rounded-full bg-white/[0.05] border border-white/[0.12] flex items-center justify-center text-mist-400 shrink-0 text-xs">✕</span>
                   <span>Doesn’t Understand Your Buyer</span>
                 </li>
                 <li class="flex items-center gap-3">
-                  <span class="w-6 h-6 rounded-full bg-red-500/15 border border-red-500/40 flex items-center justify-center text-red-400 shrink-0">✕</span>
+                  <span class="w-6 h-6 rounded-full bg-white/[0.05] border border-white/[0.12] flex items-center justify-center text-mist-400 shrink-0 text-xs">✕</span>
                   <span>Views and Likes, Zero Calls</span>
                 </li>
                 <li class="flex items-center gap-3">
-                  <span class="w-6 h-6 rounded-full bg-red-500/15 border border-red-500/40 flex items-center justify-center text-red-400 shrink-0">✕</span>
+                  <span class="w-6 h-6 rounded-full bg-white/[0.05] border border-white/[0.12] flex items-center justify-center text-mist-400 shrink-0 text-xs">✕</span>
                   <span>You Still Do All the Thinking</span>
                 </li>
               </ul>
@@ -1427,34 +1453,38 @@
           </div>
 
           <!-- Right Column (me): Alve Nabil -->
-          <div class="xtract-bento-card xtract-bento-card-featured p-6 sm:p-8 top-border-glow flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-2.5 mb-6 pb-3 border-b border-white/[0.08]">
-                <div class="w-8 h-8 rounded-lg brand-mark-violet p-[1.5px] flex items-center justify-center overflow-hidden shrink-0">
-                  <img src="/public/assets/alve_nabil_white.png" alt="Alve Nabil" class="w-full h-full object-cover rounded-[6.5px]" />
+          <div class="xtract-bento-card xtract-bento-card-featured p-6 sm:p-8 top-border-glow flex flex-col justify-between relative overflow-hidden">
+            <div class="pointer-events-none absolute -bottom-16 -right-16 w-64 h-64 rounded-full bg-[#D95130]/20 blur-3xl"></div>
+            <div class="relative z-10">
+              <div class="flex items-center justify-between gap-2.5 mb-6 pb-4 border-b border-nebula-500/25">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-8 h-8 rounded-lg bg-white p-[1.5px] flex items-center justify-center overflow-hidden shrink-0 shadow-[0_0_16px_rgba(217,81,48,0.3)]">
+                    <img src="/public/assets/alve_nabil_white.png" alt="Alve Nabil" class="w-full h-full object-cover rounded-[6.5px]" />
+                  </div>
+                  <span id="compCardBrandTitle" class="text-lg font-display font-medium text-white">Alve Nabil · Content Strategist</span>
                 </div>
-                <span id="compCardBrandTitle" class="text-lg font-display font-bold text-white">Alve Nabil · Content Strategist</span>
+                <span class="px-2.5 py-1 rounded-full bg-nebula-500/20 border border-nebula-400/40 text-[10px] font-mono uppercase tracking-wider text-nebula-200">Authority System</span>
               </div>
 
               <ul class="space-y-4 text-sm sm:text-base text-white font-medium">
                 <li class="flex items-center gap-3">
-                  <span class="w-6 h-6 rounded-full bg-nebula-500/25 border border-nebula-400/50 flex items-center justify-center text-nebula-300 shrink-0">✓</span>
+                  <span class="w-6 h-6 rounded-full bg-nebula-500/25 border border-nebula-400/50 flex items-center justify-center text-nebula-300 shrink-0 text-xs">✓</span>
                   <span>Strategy Before Production</span>
                 </li>
                 <li class="flex items-center gap-3">
-                  <span class="w-6 h-6 rounded-full bg-nebula-500/25 border border-nebula-400/50 flex items-center justify-center text-nebula-300 shrink-0">✓</span>
+                  <span class="w-6 h-6 rounded-full bg-nebula-500/25 border border-nebula-400/50 flex items-center justify-center text-nebula-300 shrink-0 text-xs">✓</span>
                   <span>Positioning, Hooks &amp; Funnel Thinking</span>
                 </li>
                 <li class="flex items-center gap-3">
-                  <span class="w-6 h-6 rounded-full bg-nebula-500/25 border border-nebula-400/50 flex items-center justify-center text-nebula-300 shrink-0">✓</span>
+                  <span class="w-6 h-6 rounded-full bg-nebula-500/25 border border-nebula-400/50 flex items-center justify-center text-nebula-300 shrink-0 text-xs">✓</span>
                   <span>Built Around Your Ideal Client</span>
                 </li>
                 <li class="flex items-center gap-3">
-                  <span class="w-6 h-6 rounded-full bg-nebula-500/25 border border-nebula-400/50 flex items-center justify-center text-nebula-300 shrink-0">✓</span>
+                  <span class="w-6 h-6 rounded-full bg-nebula-500/25 border border-nebula-400/50 flex items-center justify-center text-nebula-300 shrink-0 text-xs">✓</span>
                   <span>Content Designed to Book Calls</span>
                 </li>
                 <li class="flex items-center gap-3">
-                  <span class="w-6 h-6 rounded-full bg-nebula-500/25 border border-nebula-400/50 flex items-center justify-center text-nebula-300 shrink-0">✓</span>
+                  <span class="w-6 h-6 rounded-full bg-nebula-500/25 border border-nebula-400/50 flex items-center justify-center text-nebula-300 shrink-0 text-xs">✓</span>
                   <span>Zero-Friction, Consistent Delivery</span>
                 </li>
               </ul>
@@ -1464,8 +1494,9 @@
         </div>
 
         <div class="mt-10 text-center">
-          <a href="#lets-talk" class="btn-nebula inline-flex items-center justify-center px-7 py-3.5 rounded-[8px] font-semibold text-sm sm:text-base text-white">
-            Book a Strategy Call
+          <a href="#lets-talk" class="btn-nebula inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-medium text-sm sm:text-base text-white">
+            <span>Book a Strategy Call</span>
+            <span class="text-xs opacity-90">↗</span>
           </a>
         </div>
       </div>
@@ -1484,25 +1515,24 @@
           <!-- Decorative Bottom-Left Curved Connector Line + Dot -->
           <svg class="hidden md:block absolute left-0 bottom-0 w-48 h-28 text-white/15 pointer-events-none" viewBox="0 0 200 110" fill="none">
             <path d="M0 78 C 65 95, 130 105, 135 72 L 135 16" stroke="currentColor" stroke-width="1.2" />
-            <circle cx="135" cy="14" r="4.5" fill="#8B5CF6" />
+            <circle cx="135" cy="14" r="4.5" fill="#D95130" />
           </svg>
 
           <!-- Decorative Right Curved Connector Line + Dot -->
           <svg class="hidden md:block absolute right-0 bottom-0 w-44 h-44 text-white/15 pointer-events-none" viewBox="0 0 180 180" fill="none">
             <path d="M18 24 L 118 24 C 148 24, 160 44, 164 88 L 174 180" stroke="currentColor" stroke-width="1.2" />
-            <circle cx="16" cy="24" r="4.5" fill="#8B5CF6" />
+            <circle cx="16" cy="24" r="4.5" fill="#D95130" />
           </svg>
 
           <!-- Left Column: Editorial Heading & Philosophy Quote -->
           <div class="md:col-span-6 space-y-4 relative z-10">
             <div class="xtract-badge">
-              <span class="xtract-badge-dot"></span>
               <span>My Philosophy</span>
             </div>
             <div>
               <div id="founderRole" class="text-xs uppercase tracking-wider text-mist-400 font-semibold">Content Strategist</div>
-              <h3 id="founderName" class="font-display text-3xl sm:text-4xl font-extrabold text-white mt-1 leading-tight">
-                Alve <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#DDD6FE] via-[#A78BFA] to-[#8B5CF6]">Nabil</span>
+              <h3 id="founderName" class="font-display text-3xl sm:text-4xl font-medium text-white mt-1 leading-tight">
+                Alve <span class="clipcut-text-grad">Nabil</span>
               </h3>
             </div>
             <blockquote id="founderQuote" class="text-base sm:text-lg text-mist-200 leading-relaxed font-medium">
@@ -1517,9 +1547,9 @@
           <div class="md:col-span-6 flex items-center justify-center relative z-10 py-8 sm:py-10">
             <div class="relative w-60 sm:w-68 md:w-72 aspect-square">
               
-              <!-- Aurora Mesh Rounded-Square Backdrop Card -->
-              <div class="absolute inset-0 rounded-[30px] border border-white/15 shadow-[0_24px_60px_-12px_rgba(109,40,217,0.48)] overflow-hidden" style="background: radial-gradient(circle at 50% 85%, rgba(139, 92, 246, 0.72) 0%, rgba(109, 40, 217, 0.48) 42%, transparent 72%), radial-gradient(circle at 20% 25%, rgba(167, 139, 250, 0.4) 0%, transparent 55%), radial-gradient(circle at 82% 28%, rgba(124, 58, 237, 0.5) 0%, transparent 55%), #0B0A10;">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#030305]/75 via-transparent to-transparent"></div>
+              <!-- Aurora Mesh Rounded-Square Backdrop Card (ClipCut Warm Terracotta Ember Glow) -->
+              <div class="absolute inset-0 rounded-[30px] border border-white/15 shadow-[0_24px_60px_-12px_rgba(217,81,48,0.48)] overflow-hidden" style="background: radial-gradient(circle at 50% 85%, rgba(217, 81, 48, 0.72) 0%, rgba(168, 64, 39, 0.48) 42%, transparent 72%), radial-gradient(circle at 20% 25%, rgba(237, 121, 92, 0.4) 0%, transparent 55%), radial-gradient(circle at 82% 28%, rgba(232, 136, 67, 0.48) 0%, transparent 55%), #120C09;">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#090401]/75 via-transparent to-transparent"></div>
               </div>
 
               <!-- Pop-Out Cutout Portrait (Head Breaks Above Top Edge, Bottom Clipped to Rounded Square) -->
@@ -1554,13 +1584,13 @@
                 <span>200+ Videos</span>
               </div>
 
-              <!-- 4. Bottom-Left Floating Pink Cursor-Tag Pill + Pointer Arrow -->
+              <!-- 4. Bottom-Left Floating Warm Ember Cursor-Tag Pill + Pointer Arrow -->
               <div class="float-ambient-4 absolute -bottom-6 -left-3 sm:-left-8 z-20">
                 <!-- Diagonal Pointer Triangle -->
-                <svg class="w-5 h-5 text-[#F472B6] ml-auto -mr-2 -mb-1 drop-shadow-[0_4px_10px_rgba(244,114,182,0.7)]" viewBox="0 0 24 24" fill="currentColor">
+                <svg class="w-5 h-5 text-[#ED795C] ml-auto -mr-2 -mb-1 drop-shadow-[0_4px_10px_rgba(217,81,48,0.7)]" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M21 3L3 10.5l7.5 3L13.5 21 21 3z"/>
                 </svg>
-                <div class="px-4 py-2 rounded-full bg-gradient-to-r from-[#F5D0FE] via-[#F9A8D4] to-[#E879F9] text-[#3B0764] font-semibold text-xs sm:text-sm shadow-[0_12px_34px_rgba(232,121,249,0.55)] border border-white/50 whitespace-nowrap">
+                <div class="px-4 py-2 rounded-full bg-gradient-to-r from-[#FFE6DC] via-[#F59E7E] to-[#D95130] text-[#1F0903] font-semibold text-xs sm:text-sm shadow-[0_12px_34px_rgba(217,81,48,0.55)] border border-white/50 whitespace-nowrap">
                   <span id="founderCardBadgeSub">Content Strategist · 1–2 Clients</span>
                 </div>
               </div>
@@ -1581,13 +1611,12 @@
       <div class="max-w-6xl mx-auto xtract-bento-card diagonal-rays p-6 sm:p-10 md:p-14 relative z-10 overflow-hidden top-border-glow">
         <div class="text-center max-w-2xl mx-auto mb-10">
           <div class="xtract-badge mb-4">
-            <span class="xtract-badge-dot"></span>
             <span>Strategy Call</span>
           </div>
 
-          <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          <h2 class="font-display text-3xl sm:text-4xl md:text-[50px] font-medium tracking-[-0.035em] text-white leading-[1.22] sm:leading-[1.2] md:leading-[1.18]">
             Ready to Make Your Content<br />
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F3F4F6] via-[#DDD6FE] to-[#A78BFA]">Do the Selling?</span>
+            <span class="clipcut-text-grad">Do the Selling?</span>
           </h2>
           <p class="mt-4 text-sm sm:text-base text-mist-400">
             Book a 30-minute strategy call. We’ll look at your offer, your audience, and where your content is losing leads. You’ll leave with clarity, whether we work together or not.
@@ -1595,14 +1624,14 @@
         </div>
 
         <!-- Native Interactive Cal.com Scheduler (Cursor-Friendly DOM + Live Cal.com Handoff) -->
-        <div id="calLiveEmbedContainer" class="xtract-bento-card bg-[#0B0A10] border border-white/[0.08] shadow-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 text-left">
+        <div id="calLiveEmbedContainer" class="xtract-bento-card bg-[#120C09] border border-white/[0.08] shadow-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 text-left">
           
           <!-- Left Column: Host & Meeting Info -->
           <div class="lg:col-span-3 p-6 border-b lg:border-b-0 lg:border-r border-white/10 flex flex-col justify-between">
             <div>
-              <img src="/public/assets/alve_nabil_white.png" alt="Alve Nabil" class="w-8 h-8 rounded-full object-cover mb-2.5 border border-white/15" />
-              <div class="text-sm text-[#a3a3a3] font-medium">Alve nabil</div>
-              <h3 class="text-xl font-bold text-white mt-1 mb-5">30 min meeting</h3>
+              <img src="/public/assets/alve_nabil_white.png" alt="Alve Nabil" class="w-8 h-8 rounded-full object-cover mb-2.5 border border-white/15 bg-white" />
+              <div class="text-sm text-[#a3a3a3] font-medium">Alve Nabil</div>
+              <h3 class="text-xl font-bold text-white mt-1 mb-5">30-Min Strategy Call</h3>
 
               <div class="space-y-3 text-sm text-[#d4d4d4]">
                 <div class="flex items-center gap-2.5">
@@ -1616,10 +1645,10 @@
                 <div class="flex items-center gap-2.5">
                   <svg class="w-4 h-4 text-[#a3a3a3]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
                   <select id="calWidgetTzSelect" aria-label="Select Timezone" class="bg-transparent text-sm text-[#d4d4d4] focus:outline-none cursor-pointer pr-1">
-                    <option value="Asia/Dhaka" class="bg-[#0B0A10] text-white">Asia/Dhaka</option>
-                    <option value="UTC" class="bg-[#0B0A10] text-white">UTC</option>
-                    <option value="America/New_York" class="bg-[#0B0A10] text-white">America/New_York</option>
-                    <option value="Europe/London" class="bg-[#0B0A10] text-white">Europe/London</option>
+                    <option value="Asia/Dhaka" class="bg-[#120C09] text-white">Asia/Dhaka</option>
+                    <option value="UTC" class="bg-[#120C09] text-white">UTC</option>
+                    <option value="America/New_York" class="bg-[#120C09] text-white">America/New_York</option>
+                    <option value="Europe/London" class="bg-[#120C09] text-white">Europe/London</option>
                   </select>
                 </div>
               </div>
@@ -1627,7 +1656,7 @@
 
             <div class="pt-6 mt-6 border-t border-white/[0.08] text-xs text-mist-400 flex items-center justify-between">
               <span>cal.com/alve-nabil-fmw83h</span>
-              <span class="w-2 h-2 rounded-full bg-[#8B5CF6] shadow-[0_0_8px_rgba(139,92,246,0.8)]"></span>
+              <span class="w-2 h-2 rounded-full bg-[#D95130] shadow-[0_0_8px_rgba(217,81,48,0.8)]"></span>
             </div>
           </div>
 
@@ -1657,8 +1686,8 @@
             <div>
               <div class="flex items-center justify-between mb-4">
                 <div class="text-sm font-bold text-white" id="calWidgetDayLabel">Tue <span class="text-mist-400 font-medium">17th</span></div>
-                <div class="inline-flex rounded-[8px] bg-[#030305] p-0.5 border border-white/[0.08] text-xs">
-                  <button id="calWidget12hBtn" type="button" class="px-2.5 py-1 rounded-[6px] bg-[#8B5CF6] text-white font-semibold transition">12h</button>
+                <div class="inline-flex rounded-[8px] bg-[#090401] p-0.5 border border-white/[0.08] text-xs">
+                  <button id="calWidget12hBtn" type="button" class="px-2.5 py-1 rounded-[6px] bg-[#D95130] text-white font-semibold transition">12h</button>
                   <button id="calWidget24hBtn" type="button" class="px-2.5 py-1 rounded-[6px] text-mist-400 hover:text-white transition">24h</button>
                 </div>
               </div>
@@ -1670,7 +1699,7 @@
 
             <div id="calWidgetConfirmBar" class="mt-4 pt-3 border-t border-white/[0.08] flex items-center justify-between gap-2 text-xs text-mist-400">
               <span id="calWidgetSelectedInfo">Select a time slot to book</span>
-              <a id="calWidgetProceedLink" href="https://cal.com/alve-nabil-fmw83h/30min?date=2026-11-17&month=2026-11" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-[8px] btn-nebula text-white font-semibold whitespace-nowrap">
+              <a id="calWidgetProceedLink" href="https://cal.com/alve-nabil-fmw83h/30min?date=2026-11-17&month=2026-11" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-full btn-nebula text-white font-semibold whitespace-nowrap">
                 Book Slot ↗
               </a>
             </div>
@@ -1681,28 +1710,28 @@
     </section>
 
     <!-- ==========================================
-         9. FAQ ACCORDION SECTION (ALL 6 VERBATIM ITEMS)
+         9. FAQ ACCORDION SECTION (CLIPCUT 2-COLUMN LAYOUT)
          ========================================== -->
     <section id="faq" class="py-12 md:py-20 px-4 sm:px-6">
-      <div class="max-w-6xl mx-auto xtract-bento-card diagonal-rays p-6 sm:p-10 md:p-14 relative overflow-hidden top-border-glow">
+      <div class="max-w-6xl mx-auto p-2 sm:p-4 relative">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           
           <!-- Left Column: FAQ Heading -->
           <div class="lg:col-span-5 space-y-4">
             <div class="xtract-badge">
-              <span class="xtract-badge-dot"></span>
               <span>FAQ</span>
             </div>
-            <h2 class="font-display text-3xl sm:text-4xl md:text-[42px] font-extrabold tracking-tight text-white leading-tight">
+            <h2 class="font-display text-3xl sm:text-4xl md:text-[46px] font-medium tracking-[-0.035em] text-white leading-[1.22] sm:leading-[1.2] md:leading-[1.18]">
               Questions Worth Asking<br />
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F3F4F6] via-[#DDD6FE] to-[#A78BFA]">Before We Start</span>
+              <span class="clipcut-text-grad">Before We Start</span>
             </h2>
-            <p class="text-sm sm:text-base text-mist-400">
-              Everything you need to know before we get started.
+            <p class="text-sm sm:text-base text-mist-400 leading-relaxed">
+              Got questions? Here’s everything you need to know before we get started.
             </p>
-            <div class="pt-2 flex flex-wrap gap-3">
-              <a href="#lets-talk" class="btn-nebula inline-flex items-center justify-center px-6 py-3 rounded-[8px] font-semibold text-sm text-white">
-                Book a Strategy Call
+            <div class="pt-3 flex flex-wrap gap-3">
+              <a href="#lets-talk" class="btn-nebula inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-medium text-sm text-white">
+                <span>Book a Strategy Call</span>
+                <span class="text-xs opacity-90">↗</span>
               </a>
               <button id="expandAllFaqBtn" type="button" class="btn-xtract-secondary px-4 py-3 text-xs font-medium transition">
                 Expand All 6 Answers
@@ -1722,20 +1751,47 @@
   </main>
 
   <!-- ==========================================
-       10. FOOTER WITH TOP LIGHT BEAM & 30 HOOKS LEAD MAGNET
+       10. CLIPCUT HEROIC CTA BANNER + FOOTER WITH 30 HOOKS LEAD MAGNET
        ========================================== -->
-  <footer class="footer-top-beam bg-[#030305] border-t border-white/[0.08] pt-16 pb-12 px-4 sm:px-6 relative overflow-hidden">
+  <footer class="footer-top-beam bg-[#090401] border-t border-white/[0.08] pt-14 pb-12 px-4 sm:px-6 relative overflow-hidden">
     <div class="xtract-starfield opacity-70"></div>
     <div class="max-w-6xl mx-auto relative z-10">
+
+      <!-- ClipCut Signature Full-Width Fluted Ember CTA Banner -->
+      <div class="mb-16 rounded-[28px] clipcut-fluted-bg border border-[#D95130]/30 p-8 sm:p-12 md:p-16 text-center relative overflow-hidden shadow-[0_24px_80px_-16px_rgba(217,81,48,0.28)]">
+        <div class="pointer-events-none absolute -bottom-24 left-1/2 -translate-x-1/2 w-[540px] h-[220px] rounded-full bg-[#D95130]/25 blur-3xl"></div>
+        <div class="relative z-10 max-w-2xl mx-auto space-y-5">
+          <div class="xtract-badge mx-auto">
+            <span>Ready to Scale</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl md:text-[52px] font-medium tracking-[-0.035em] text-white leading-[1.22] sm:leading-[1.2] md:leading-[1.18]">
+            Ready to turn your content<br />
+            <span class="clipcut-text-grad">into booked calls?</span>
+          </h2>
+          <p class="text-sm sm:text-base text-mist-300 max-w-xl mx-auto">
+            Let’s build a strategy-first content engine that pre-sells your expertise before prospects ever book a call.
+          </p>
+          <div class="pt-2">
+            <a href="#lets-talk" class="btn-nebula inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-medium text-sm sm:text-base text-white">
+              <span>Start Growing Today</span>
+              <span class="text-xs opacity-90">↗</span>
+            </a>
+          </div>
+          <div class="text-xs text-mist-400">
+            No long-term lock-in. Strategy-first. Built to convert.
+          </div>
+        </div>
+      </div>
+
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/[0.08]">
         
         <!-- Col 1: Brand + Tagline -->
         <div class="lg:col-span-4 space-y-4">
           <div class="flex items-center gap-2.5">
-            <div class="w-9 h-9 rounded-xl brand-mark-violet p-[1.5px] flex items-center justify-center overflow-hidden shrink-0">
+            <div class="w-9 h-9 rounded-xl bg-white p-[1.5px] flex items-center justify-center overflow-hidden shrink-0 shadow-[0_0_18px_rgba(217,81,48,0.28)]">
               <img src="/public/assets/alve_nabil_white.png" alt="Alve Nabil" class="w-full h-full object-cover rounded-[10.5px]" />
             </div>
-            <span id="footerBrandTitle" class="font-display font-bold text-lg text-white">Alve Nabil.</span>
+            <span id="footerBrandTitle" class="font-display font-medium text-lg text-white">Alve Nabil.</span>
           </div>
           <p id="footerTagline" class="text-sm text-mist-400 leading-relaxed max-w-xs">
             Built for experts who sell on trust. — <span class="text-mist-200 font-medium">Alve Nabil</span>
@@ -1748,7 +1804,7 @@
           <div><a href="#home" class="text-mist-300 hover:text-white transition">Home</a></div>
           <div><a href="#results" class="text-mist-300 hover:text-white transition">Results</a></div>
           <div><a href="#portfolio" class="text-mist-300 hover:text-white transition">Work</a></div>
-          <div><a href="#about" class="text-mist-300 hover:text-white transition">About</a></div>
+          <div><a href="#about" class="text-mist-300 hover:text-white transition">Services</a></div>
           <div><a href="#why-us" class="text-mist-300 hover:text-white transition">Why Me</a></div>
         </div>
 
@@ -1763,7 +1819,7 @@
           </div>
           <div>
             <a href="https://linktr.ee/alvenabil" target="_blank" rel="noopener noreferrer" class="text-mist-300 hover:text-nebula-400 transition inline-flex items-center gap-1.5">
-              <span>Youtube</span>
+              <span>YouTube</span>
               <span class="text-[10px] text-mist-500">↗</span>
             </a>
           </div>
@@ -1775,18 +1831,18 @@
           </div>
         </div>
 
-        <!-- Col 4: Lead Magnet "Get 30 Best Performing Hooks for free" -->
+        <!-- Col 4: Lead Magnet "Get 30 High-Retention Hooks (Free)" -->
         <div class="lg:col-span-4 space-y-3">
-          <div class="text-sm font-display font-bold text-white">
-            Get 30 Best Performing Hooks for free
+          <div class="text-sm font-display font-medium text-white">
+            Get 30 High-Retention Hooks (Free)
           </div>
           <p class="text-xs text-mist-400">
             Unlock our tested short-form opening hooks engineered for 75%+ 3-second retention.
           </p>
           <form id="hooksSubscribeForm" class="relative flex items-center">
-            <input id="hooksEmailInput" type="email" required placeholder="Enter Your Email...." class="w-full rounded-[8px] bg-[#0B0A10] border border-white/[0.12] pl-4 pr-32 py-3 text-xs text-white placeholder-mist-500 focus:outline-none focus:border-nebula-500" />
-            <button type="submit" class="absolute right-1.5 top-1.5 bottom-1.5 px-4 rounded-[6px] btn-nebula text-xs font-semibold text-white">
-              Subscribe Us
+            <input id="hooksEmailInput" type="email" required placeholder="Enter your email address" class="w-full rounded-full bg-[#120C09] border border-white/[0.12] pl-4 pr-36 py-3 text-xs text-white placeholder-mist-500 focus:outline-none focus:border-nebula-500" />
+            <button type="submit" class="absolute right-1.5 top-1.5 bottom-1.5 px-4 rounded-full btn-nebula text-xs font-semibold text-white">
+              Get Free Hooks
             </button>
           </form>
           <div id="hooksFeedbackMsg" class="hidden text-xs text-nebula-300"></div>
@@ -1810,9 +1866,9 @@
        MODAL FOR 30 VIRAL HOOKS VAULT & LEGAL POLICIES
        ========================================== -->
   <div id="appModalBackdrop" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="xtract-bento-card bg-[#0B0A10] border border-white/[0.12] rounded-2xl max-w-lg w-full p-6 shadow-2xl relative max-h-[85vh] flex flex-col">
+    <div class="xtract-bento-card bg-[#120C09] border border-white/[0.12] rounded-2xl max-w-lg w-full p-6 shadow-2xl relative max-h-[85vh] flex flex-col">
       <div class="flex items-center justify-between pb-3 border-b border-white/[0.08]">
-        <h3 id="modalTitle" class="font-display font-bold text-lg text-white">30 Best Performing Short-Form Hooks</h3>
+        <h3 id="modalTitle" class="font-display font-medium text-lg text-white">30 Best Performing Short-Form Hooks</h3>
         <button id="closeModalBtn" type="button" class="p-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-mist-400 hover:text-white">✕</button>
       </div>
       <div id="modalBody" class="py-4 overflow-y-auto text-xs sm:text-sm text-mist-300 space-y-3">
@@ -1850,11 +1906,11 @@
           youtubeId: 'PjIhdUzOg60',
           youtubeUrl: 'https://youtu.be/PjIhdUzOg60',
           thumbnailUrl: 'https://i.ytimg.com/vi/PjIhdUzOg60/hqdefault.jpg',
-          accent: '#8B5CF6'
+          accent: '#D95130'
         },
-        { label: 'Woman Zoom Shot', sub: 'Dynamic Hook Zoom', accent: '#F43F5E' },
-        { label: 'Container', sub: '3D Motion Callout', accent: '#A78BFA' },
-        { label: 'Villa', sub: 'Luxury Real Estate 4K', accent: '#7C3AED' },
+        { label: '3-Second Hook Architecture', sub: 'Retention Opening System', meta: '75%+ Avg. Hold Rate', accent: '#E88843' },
+        { label: 'Custom UI Proof Callouts', sub: '3D Motion & Overlays', meta: 'Restrained Authority UI', accent: '#ED795C' },
+        { label: '4K Executive Color Grade', sub: 'Studio Visual Identity', meta: 'Cinema-Grade Look', accent: '#D4482C' },
         {
           label: 'Talking Head',
           sub: 'Founder Talking Head',
@@ -1862,9 +1918,9 @@
           youtubeId: 'UKm5AiRmcOE',
           youtubeUrl: 'https://youtu.be/UKm5AiRmcOE',
           thumbnailUrl: 'https://i.ytimg.com/vi/UKm5AiRmcOE/hqdefault.jpg',
-          accent: '#8B5CF6'
+          accent: '#D95130'
         },
-        { label: 'Car Front', sub: 'Speed Ramp Transition', accent: '#6D28D9' },
+        { label: 'Retention Pacing & Cuts', sub: 'Editorial Rhythm', meta: 'Zero Filler Frames', accent: '#A84027' },
         {
           label: 'E-Com',
           sub: 'E-Com Motion & Grade',
@@ -1872,11 +1928,11 @@
           youtubeId: 'PwKfXWBL6_U',
           youtubeUrl: 'https://youtu.be/PwKfXWBL6_U',
           thumbnailUrl: 'https://i.ytimg.com/vi/PwKfXWBL6_U/hqdefault.jpg',
-          accent: '#C084FC'
+          accent: '#E88843'
         },
-        { label: 'Woman In Garden', sub: 'Lifestyle Storytelling', accent: '#8B5CF6' },
-        { label: 'Man And A Car', sub: 'Authority B-Roll Cut', accent: '#7C3AED' },
-        { label: 'Woman', sub: 'Retention Caption System', accent: '#A78BFA' }
+        { label: 'Authority B-Roll Sequencing', sub: 'Visual Storytelling', meta: 'Context-First Framing', accent: '#D95130' },
+        { label: 'Editorial Caption Hierarchy', sub: 'Silent-Scroll Readability', meta: 'Custom Typography', accent: '#D4482C' },
+        { label: 'Broadcast Audio & Mastering', sub: 'Studio Sound Design', meta: 'Crisp Vocal Presence', accent: '#ED795C' }
       ];
 
       // 3 Credibility Testimonials Data
@@ -1894,7 +1950,7 @@
           reelUrl: 'https://www.instagram.com/reel/DZDbZOoyTf6/?utm_source=ig_web_copy_link&avpt=MzRlODBiNWFlZA==',
           platformLabel: 'Instagram',
           quote: 'Is taking GLP-1 cheating? Debunking the 3 biggest myths around metabolic health, protein-first muscle preservation, and building sustainable habits.',
-          accent: '#8B5CF6'
+          accent: '#D95130'
         },
         {
           id: 'test-dev',
@@ -1909,7 +1965,7 @@
           reelUrl: 'https://www.instagram.com/reel/DcF-5gTA5lM/?utm_source=ig_web_copy_link&gwpx=MzRlODBiNWFlZA==&avpt=MzRlODBiNWFlZA==',
           platformLabel: 'Instagram',
           quote: 'Need an official document translated in Poland? 100% legally recognized translations in 58+ languages — free online quote in 3 simple steps.',
-          accent: '#8B5CF6'
+          accent: '#E88843'
         },
         {
           id: 'test-vicky',
@@ -1924,86 +1980,95 @@
           reelUrl: 'https://www.facebook.com/share/v/1F1KtgE1Yv/',
           platformLabel: 'Facebook',
           quote: '🇵🇱 Sp. z o.o. in Poland: Limited Liability, Unlimited Responsibilities? TRC residence links, ZUS obligations, tax compliance & liquidation strategy.',
-          accent: '#6D28D9'
+          accent: '#D4482C'
         }
       ];
 
-      // 6 Vertical Portfolio Videos Data with Strategy Proof (What Changed + What Happened)
+      // 6 Selected Work Portfolio Videos (All 6 Wired to Real Playable YouTube Videos & Thumbnails)
       const portfolioVideosData = [
         {
           id: 'port-1',
           youtubeId: 'uv-UynNRN1M',
-          youtubeUrl: 'https://youtu.be/uv-UynNRN1M?si=OJwa0I2wy3Lgux3k',
+          youtubeUrl: 'https://youtu.be/uv-UynNRN1M',
           thumbnailUrl: 'https://i.ytimg.com/vi/uv-UynNRN1M/hqdefault.jpg',
           title: '🇵🇱 Business in Poland: Tax Compliance, AI Monitoring & Unpaid ZUS — What Should You Know?',
           client: '@Mohammad_in_Poland • Mohammad in Poland',
           category: 'retention',
-          metrics: 'youtu.be/uv-UynNRN1M • Talking Head',
+          metrics: 'Talking Head · B2B',
           strategyProof: 'High-retention talking head breakdown turning complex Polish tax compliance, AI monitoring, and ZUS rules into clear buyer authority for business owners.',
           duration: 45,
           hookText: 'TAX COMPLIANCE & AI MONITORING IN POLAND',
-          accent: '#8B5CF6'
+          accent: '#D95130'
         },
         {
           id: 'port-2',
-          title: 'Authority Angle & Deal Structure Breakdown',
-          client: '@dev.gotmoney • 81K',
-          category: 'motion',
-          metrics: '0 → 40,000+ Followers System',
-          strategyProof: 'Shifted from broad finance tips to high-ticket case study angles → 0 to 40K+ followers and consistent inbound leads.',
+          youtubeId: 'UKm5AiRmcOE',
+          youtubeUrl: 'https://youtu.be/UKm5AiRmcOE',
+          thumbnailUrl: 'https://i.ytimg.com/vi/UKm5AiRmcOE/hqdefault.jpg',
+          title: 'Founder Talking Head — High-Retention Authority Pacing & Hook Structure',
+          client: '@nabilution • Alve Nabil',
+          category: 'retention',
+          metrics: 'Founder Talking Head',
+          strategyProof: 'Clean executive framing, 3-second hook hold, and structured visual callouts engineered to keep high-ticket buyers engaged.',
           duration: 52,
-          hookText: 'HOW THE 1% STRUCTURE DEALS',
-          accent: '#A78BFA'
+          hookText: 'FOUNDER TALKING HEAD SYSTEM',
+          accent: '#E88843'
         },
         {
           id: 'port-3',
           youtubeId: 'aCfwzUsSiQ0',
-          youtubeUrl: 'https://youtu.be/aCfwzUsSiQ0?si=hJ8Dp01Kusno-sko',
+          youtubeUrl: 'https://youtu.be/aCfwzUsSiQ0',
           thumbnailUrl: 'https://i.ytimg.com/vi/aCfwzUsSiQ0/hqdefault.jpg',
           title: 'My 360° Local SEO Process: SEO, AEO & GEO | Muhaiminul Islam Sajib',
           client: '@MuhaiminulIslamSajib • Muhaiminul Islam Sajib',
           category: 'b2b',
-          metrics: 'youtu.be/aCfwzUsSiQ0 • B2B Funnel',
+          metrics: 'B2B Search Funnel',
           strategyProof: 'Structured 360° Local SEO, AEO, and GEO methodology breakdown designed to demonstrate B2B search authority and convert inbound agency prospects.',
           duration: 38,
           hookText: '360° LOCAL SEO PROCESS: SEO, AEO & GEO',
-          accent: '#7C3AED'
+          accent: '#D4482C'
         },
         {
           id: 'port-4',
-          title: 'Restrained Executive Motion & Proof Overlay',
-          client: 'Founder Advisory Brand',
+          youtubeId: 'PjIhdUzOg60',
+          youtubeUrl: 'https://youtu.be/PjIhdUzOg60',
+          thumbnailUrl: 'https://i.ytimg.com/vi/PjIhdUzOg60/hqdefault.jpg',
+          title: 'E-Com Product Showcase — Dynamic Motion Callouts & Visual Storytelling',
+          client: '@nabilution • Product Reel',
           category: 'motion',
-          metrics: '79% Avg Watch Time • 3.2x Inbound',
-          strategyProof: 'Cut flashy transitions in favor of restrained UI proof callouts → 79% completion rate among high-ticket buyers.',
+          metrics: 'Motion & Product Grade',
+          strategyProof: 'Precision speed ramps, product callouts, and studio color grading built to showcase product value in under 30 seconds.',
           duration: 41,
-          hookText: 'FIX THE MESSAGE BEFORE THE EDIT',
-          accent: '#8B5CF6'
+          hookText: 'E-COM PRODUCT MOTION SHOWCASE',
+          accent: '#D95130'
         },
         {
           id: 'port-5',
           youtubeId: 'VKUCvrAdgCQ',
-          youtubeUrl: 'https://youtu.be/VKUCvrAdgCQ?si=qH5o7525AwXSniLI',
+          youtubeUrl: 'https://youtu.be/VKUCvrAdgCQ',
           thumbnailUrl: 'https://i.ytimg.com/vi/VKUCvrAdgCQ/hqdefault.jpg',
           title: 'Social Security Breakeven Age: Should You Claim at 62, 67, or 70?',
           client: '@MedicareonVideo • Medicare Specialist',
           category: 'retention',
-          metrics: 'youtu.be/VKUCvrAdgCQ • Talking Head',
+          metrics: 'Advisor Breakdown',
           strategyProof: 'Structured retirement & Social Security breakeven analysis paced with clear visual comparisons that answer high-intent client questions before the consultation.',
           duration: 49,
           hookText: 'CLAIM AT 62, 67, OR 70? BREAKEVEN MATH',
-          accent: '#F43F5E'
+          accent: '#ED795C'
         },
         {
           id: 'port-6',
-          title: 'Founder VSL & Long-Form to Short-Form System',
-          client: 'High-Ticket Program Founder',
-          category: 'b2b',
-          metrics: '8 Polished Videos/Mo Retainer',
-          strategyProof: 'Extracted 8 high-authority micro-assets from 1 monthly recording session → zero founder friction, full calendar.',
+          youtubeId: 'PwKfXWBL6_U',
+          youtubeUrl: 'https://youtu.be/PwKfXWBL6_U',
+          thumbnailUrl: 'https://i.ytimg.com/vi/PwKfXWBL6_U/hqdefault.jpg',
+          title: 'E-Com Authority Edit — High-Contrast Visual Hook & Conversion Pacing',
+          client: '@nabilution • Brand System',
+          category: 'motion',
+          metrics: 'E-Com Motion System',
+          strategyProof: 'High-contrast motion graphics, sound design, and conversion-focused pacing engineered to turn cold viewers into warm buyers.',
           duration: 58,
-          hookText: 'SCALE WITHOUT SECOND GUESSING',
-          accent: '#6D28D9'
+          hookText: 'HIGH-RETENTION E-COM EDIT',
+          accent: '#A84027'
         }
       ];
 
@@ -2226,8 +2291,8 @@
             </div>
 
             <!-- Vertical 9:16 Short-Form Reel Preview Box -->
-            <div class="relative aspect-[9/16] w-full rounded-xl bg-[#05040A] border border-white/[0.08] overflow-hidden cursor-pointer group" data-player-id="${t.id}" data-duration="${t.duration}">
-              <div class="media-stage-zoom absolute inset-0" style="background: radial-gradient(circle at 50% 42%, ${t.accent}48, rgba(11,10,16,0.2) 55%, transparent 78%);"></div>
+            <div class="relative aspect-[9/16] w-full rounded-xl bg-[#090401] border border-white/[0.08] overflow-hidden cursor-pointer group" data-player-id="${t.id}" data-duration="${t.duration}">
+              <div class="media-stage-zoom absolute inset-0" style="background: radial-gradient(circle at 50% 42%, ${t.accent}48, rgba(18,12,9,0.2) 55%, transparent 78%);"></div>
               ${t.videoSrc
                 ? `<video src="${t.videoSrc}" poster="${t.posterSrc || ''}" playsinline loop preload="metadata" class="testimonial-native-video media-stage-zoom absolute inset-0 w-full h-full object-cover opacity-95 group-hover:opacity-100 transition-all duration-300"></video>
                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/55 pointer-events-none"></div>`
@@ -2256,7 +2321,7 @@
 
                 <!-- Bottom Controls matching 0:00 / 0:00 & 1x + Hover Scrubber -->
                 <div class="bg-black/80 backdrop-blur-md rounded-lg px-2.5 py-1.5 flex items-center justify-between text-[11px] border border-white/10 relative overflow-hidden">
-                  <div class="hover-scrubber-bar absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-nebula-400 to-fuchsia-400"></div>
+                  <div class="hover-scrubber-bar absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-[#D95130] to-[#E88843]"></div>
                   <span class="player-time font-mono text-mist-200">0:00 / ${formatSec(t.duration)}</span>
                   <button type="button" class="player-speed-btn px-1.5 py-0.5 rounded bg-white/10 hover:bg-white/20 text-white font-semibold transition">1×</button>
                 </div>
@@ -2264,7 +2329,7 @@
 
               <!-- Center Translucent Play Button with Ripple Pulse -->
               <div class="player-overlay absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/5 transition pointer-events-none z-10">
-                <div class="play-indicator-box w-11 h-11 rounded-xl bg-white/15 backdrop-blur-md border border-white/25 flex items-center justify-center shadow-[0_0_24px_rgba(139,92,246,0.3)]">
+                <div class="play-indicator-box w-11 h-11 rounded-xl bg-[#D95130]/85 backdrop-blur-md border border-white/25 flex items-center justify-center shadow-[0_0_24px_rgba(217,81,48,0.45)]">
                   <svg class="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
               </div>
@@ -2282,8 +2347,8 @@
           const safeTitleAttr = (v.title || '').replace(/"/g, '&quot;');
           const playerMarkup = isYoutube
             ? `
-            <div class="relative aspect-[4/3] w-full rounded-xl bg-[#05040A] border border-white/[0.08] overflow-hidden cursor-pointer mx-auto" data-youtube-id="${v.youtubeId}" data-youtube-title="${safeTitleAttr}">
-              <div class="media-stage-zoom absolute inset-0" style="background: radial-gradient(circle at 50% 42%, ${v.accent}52, rgba(11,10,16,0.22) 56%, transparent 78%);"></div>
+            <div class="relative aspect-[4/3] w-full rounded-xl bg-[#090401] border border-white/[0.08] overflow-hidden cursor-pointer mx-auto" data-youtube-id="${v.youtubeId}" data-youtube-title="${safeTitleAttr}">
+              <div class="media-stage-zoom absolute inset-0" style="background: radial-gradient(circle at 50% 42%, ${v.accent}52, rgba(18,12,9,0.22) 56%, transparent 78%);"></div>
               <img src="${v.thumbnailUrl}" alt="${safeTitleAttr}" referrerpolicy="no-referrer" onerror="this.style.display='none'" class="media-stage-zoom absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-95 transition-all duration-300" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/65 pointer-events-none"></div>
               <div class="absolute inset-0 p-2.5 sm:p-3.5 flex flex-col justify-between z-10">
@@ -2296,21 +2361,21 @@
                 </div>
 
                 <div class="bg-black/80 backdrop-blur-md rounded-lg px-2.5 py-1.5 flex items-center justify-between text-[10px] sm:text-[11px] border border-white/10 relative overflow-hidden">
-                  <div class="hover-scrubber-bar absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-nebula-300 via-nebula-400 to-fuchsia-400"></div>
-                  <span class="font-medium text-mist-200 truncate mr-2">Click to play video</span>
-                  <span class="font-mono text-nebula-300 shrink-0">youtu.be/${v.youtubeId}</span>
+                  <div class="hover-scrubber-bar absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-[#D95130] via-[#ED795C] to-[#E88843]"></div>
+                  <span class="font-medium text-mist-200 truncate mr-2">Click to play inline</span>
+                  <span class="font-mono text-nebula-300 shrink-0">HD · 1080p</span>
                 </div>
               </div>
 
               <div class="player-overlay absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/5 transition pointer-events-none z-10">
-                <div class="play-indicator-box w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-black/60 backdrop-blur-md border border-nebula-400/50 flex items-center justify-center shadow-[0_0_28px_rgba(139,92,246,0.45)]">
+                <div class="play-indicator-box w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#D95130]/90 backdrop-blur-md border border-white/30 flex items-center justify-center shadow-[0_0_28px_rgba(217,81,48,0.5)]">
                   <svg class="w-4 h-4 sm:w-5 sm:h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
               </div>
             </div>`
             : `
-            <div class="relative aspect-[4/3] w-full rounded-xl bg-[#05040A] border border-white/[0.08] overflow-hidden cursor-pointer mx-auto" data-player-id="${v.id}" data-duration="${v.duration}">
-              <div class="media-stage-zoom absolute inset-0" style="background: radial-gradient(circle at 50% 42%, ${v.accent}52, rgba(11,10,16,0.22) 56%, transparent 78%);"></div>
+            <div class="relative aspect-[4/3] w-full rounded-xl bg-[#090401] border border-white/[0.08] overflow-hidden cursor-pointer mx-auto" data-player-id="${v.id}" data-duration="${v.duration}">
+              <div class="media-stage-zoom absolute inset-0" style="background: radial-gradient(circle at 50% 42%, ${v.accent}52, rgba(18,12,9,0.22) 56%, transparent 78%);"></div>
               <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 32px 32px;"></div>
               <div class="absolute inset-0 p-2.5 sm:p-3.5 flex flex-col justify-between z-10">
                 <div class="flex items-center justify-between gap-1 text-[10px]">
@@ -2327,14 +2392,14 @@
                 </div>
 
                 <div class="bg-black/80 backdrop-blur-md rounded-lg px-2.5 py-1.5 flex items-center justify-between text-[10px] sm:text-[11px] border border-white/10 relative overflow-hidden">
-                  <div class="hover-scrubber-bar absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-nebula-300 via-nebula-400 to-fuchsia-400"></div>
+                  <div class="hover-scrubber-bar absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-[#D95130] via-[#ED795C] to-[#E88843]"></div>
                   <span class="player-time font-mono text-mist-200">0:00 / 0:${v.duration}</span>
                   <button type="button" class="player-speed-btn px-1.5 py-0.5 rounded bg-white/10 hover:bg-white/20 text-white font-semibold transition">1×</button>
                 </div>
               </div>
 
               <div class="player-overlay absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/5 transition pointer-events-none z-10">
-                <div class="play-indicator-box w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/15 backdrop-blur-md border border-white/25 flex items-center justify-center shadow-[0_0_24px_rgba(139,92,246,0.3)]">
+                <div class="play-indicator-box w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/15 backdrop-blur-md border border-white/25 flex items-center justify-center shadow-[0_0_24px_rgba(217,81,48,0.3)]">
                   <svg class="w-4 h-4 sm:w-5 sm:h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
               </div>
@@ -2352,7 +2417,7 @@
                 </span>
                 <span class="text-[10px] text-nebula-300 font-mono">${v.metrics}</span>
               </div>
-              <div class="text-xs sm:text-sm font-bold text-white leading-snug group-hover:text-nebula-200 transition-colors">${v.title}</div>
+              <div class="text-xs sm:text-sm font-medium text-white leading-snug group-hover:text-nebula-200 transition-colors">${v.title}</div>
             </div>
           </div>
           `;
@@ -2467,9 +2532,9 @@
         if (!btn) return;
         const filter = btn.getAttribute('data-filter');
         document.querySelectorAll('.portfolio-filter-btn').forEach(b => {
-          b.className = 'portfolio-filter-btn px-3.5 py-1.5 rounded-[8px] text-xs font-medium btn-xtract-secondary transition';
+          b.className = 'portfolio-filter-btn px-4 py-2 rounded-full text-xs font-medium btn-xtract-secondary transition';
         });
-        btn.className = 'portfolio-filter-btn px-3.5 py-1.5 rounded-[8px] text-xs font-semibold bg-nebula-600 text-white transition';
+        btn.className = 'portfolio-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-nebula-600 text-white transition';
         renderPortfolio(filter);
       });
 
@@ -2484,76 +2549,7 @@
         });
       }
 
-      // Case Study Breakdown Canvas & Switcher
-      const csCanvas = document.getElementById('csBreakdownCanvas');
-      const csCtx = csCanvas.getContext('2d');
-      let csPlaying = false;
-      let csSec = 0;
-      let csTimer = null;
-
-      function drawCsCanvas() {
-        const w = csCanvas.width;
-        const h = csCanvas.height;
-        csCtx.fillStyle = '#0B0A10';
-        csCtx.fillRect(0, 0, w, h);
-
-        // Ambient violet glow in corner
-        const glow = csCtx.createRadialGradient(w * 0.78, h * 0.25, 10, w * 0.78, h * 0.25, w * 0.55);
-        glow.addColorStop(0, 'rgba(139, 92, 246, 0.22)');
-        glow.addColorStop(1, 'rgba(11, 10, 16, 0)');
-        csCtx.fillStyle = glow;
-        csCtx.fillRect(0, 0, w, h);
-
-        // Growth Curve
-        csCtx.strokeStyle = '#8B5CF6';
-        csCtx.lineWidth = 3;
-        csCtx.beginPath();
-        csCtx.moveTo(50, h - 70);
-        csCtx.bezierCurveTo(w * 0.35, h - 75, w * 0.55, h * 0.45, w - 50, 65);
-        csCtx.stroke();
-
-        csCtx.fillStyle = '#FFFFFF';
-        csCtx.font = '500 20px Fraunces, Georgia, serif';
-        csCtx.fillText('CASE STUDY: 1K → 34K FOLLOWERS', 50, 52);
-        csCtx.fillStyle = '#9CA3AF';
-        csCtx.font = '14px "Hanken Grotesk", sans-serif';
-        csCtx.fillText('Mohammad in Poland · Positioning + Hooks + Consultation Funnel', 50, 78);
-      }
-
-      document.getElementById('csVideoContainer').addEventListener('click', function() {
-        const overlay = document.getElementById('csVideoCenterOverlay');
-        const timeEl = document.getElementById('csVideoTime');
-        csPlaying = !csPlaying;
-        playClickBeep(540);
-        if (csPlaying) {
-          overlay.style.opacity = '0';
-          clearInterval(csTimer);
-          csTimer = setInterval(() => {
-            csSec = (csSec + 1) % 193;
-            timeEl.textContent = `${formatSec(csSec)} / 3:12`;
-          }, 1000);
-        } else {
-          overlay.style.opacity = '1';
-          clearInterval(csTimer);
-        }
-      });
-
-      // Case Study Switcher (1K to 34,000 Followers System vs Mohammad in Poland 1K -> 34K Snapshot)
-      document.getElementById('csBtnDev').addEventListener('click', function() {
-        this.className = 'px-3.5 py-1.5 rounded-[8px] font-semibold bg-nebula-600 text-white transition';
-        document.getElementById('csBtnAlve').className = 'px-3.5 py-1.5 rounded-[8px] font-medium text-mist-400 hover:text-white transition';
-        document.getElementById('caseStudyHeadline').innerHTML = '1K to 34,000 Followers<br /><span class="text-mist-300">The Strategy Behind It</span><br /><span class="text-mist-400">Not Luck. A System.</span>';
-        document.getElementById('caseStudySub').textContent = 'Mohammad in Poland (Business Consultant at Lex Corporation) had real expertise and no traction. I rebuilt the strategy first (positioning, hooks, content angles), then the edits. Here’s what changed.';
-        document.getElementById('csTimeframeTop').textContent = '7–8 Months';
-      });
-
-      document.getElementById('csBtnAlve').addEventListener('click', function() {
-        this.className = 'px-3.5 py-1.5 rounded-[8px] font-semibold bg-nebula-600 text-white transition';
-        document.getElementById('csBtnDev').className = 'px-3.5 py-1.5 rounded-[8px] font-medium text-mist-400 hover:text-white transition';
-        document.getElementById('caseStudyHeadline').innerHTML = '1K to 34,000 Followers<br /><span class="text-mist-300">Consultation Funnel System</span><br /><span class="text-mist-400">Built for Lex Corporation.</span>';
-        document.getElementById('caseStudySub').textContent = 'By pairing bilingual authority positioning with high-retention short-form edits, we grew Mohammad in Poland from 1K to 34K followers and turned organic viewers into booked consultations.';
-        document.getElementById('csTimeframeTop').textContent = '7–8 Months';
-      });
+      // Case Study Breakdown Video is handled via [data-youtube-id="uv-UynNRN1M"] inline delegation
 
       // Render 6 FAQ Accordion Items (Multi-open supported, + rotates to ×)
       const openFaqs = new Set([0]);
@@ -2564,7 +2560,7 @@
           return `
             <div class="xtract-bento-card ${isOpen ? 'border-nebula-500/45' : 'border-white/[0.08]'} transition overflow-hidden">
               <button type="button" data-faq-idx="${idx}" class="faq-toggle-btn w-full px-5 py-4 text-left flex items-center justify-between gap-4 focus:outline-none">
-                <span class="font-display font-bold text-sm sm:text-base text-white">${item.q}</span>
+                <span class="font-display font-medium text-sm sm:text-base text-white">${item.q}</span>
                 <span class="w-7 h-7 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-mist-300 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-45 text-nebula-400 border-nebula-500/45' : ''}">+</span>
               </button>
               <div class="${isOpen ? 'block' : 'hidden'} px-5 pb-4 text-xs sm:text-sm text-mist-300 leading-relaxed border-t border-white/[0.06] pt-3">
@@ -2677,8 +2673,6 @@
       wheelAnimId = requestAnimationFrame(stepArcWheel);
       renderTestimonials();
       renderPortfolio('all');
-      drawCsCanvas();
-      if (document.fonts && document.fonts.ready) { document.fonts.ready.then(function () { try { drawCsCanvas(); } catch (e) {} }); }
       renderFaqAccordion();
 
       // Native Cal.com Scheduler Logic (Matches Screenshot 2026-11-16 220152.png & Links to cal.com/alve-nabil-fmw83h/30min)
@@ -2735,11 +2729,11 @@
             const isSelected = d === selectedDay;
 
             if (isSelected) {
-              out += `<button type="button" data-cday="${d}" class="cal-w-day h-10 rounded-[8px] bg-white text-[#030305] font-bold flex flex-col items-center justify-center shadow transition">${d}</button>`;
+              out += `<button type="button" data-cday="${d}" class="cal-w-day h-10 rounded-[8px] bg-white text-[#090401] font-bold flex flex-col items-center justify-center shadow transition">${d}</button>`;
             } else if (isPast || isWeekend) {
-              out += `<button type="button" disabled class="h-10 rounded-[8px] text-[#52525B] flex flex-col items-center justify-center cursor-default">${d}${isToday ? '<span class="w-1 h-1 rounded-full bg-[#8B5CF6] mt-0.5"></span>' : ''}</button>`;
+              out += `<button type="button" disabled class="h-10 rounded-[8px] text-[#57504D] flex flex-col items-center justify-center cursor-default">${d}${isToday ? '<span class="w-1 h-1 rounded-full bg-[#D95130] mt-0.5"></span>' : ''}</button>`;
             } else {
-              out += `<button type="button" data-cday="${d}" class="cal-w-day h-10 rounded-[8px] bg-[#141220] hover:bg-[#1E1B30] border border-white/[0.08] text-white font-semibold flex flex-col items-center justify-center transition">${d}</button>`;
+              out += `<button type="button" data-cday="${d}" class="cal-w-day h-10 rounded-[8px] bg-[#1C120D] hover:bg-[#261812] border border-white/[0.08] text-white font-semibold flex flex-col items-center justify-center transition">${d}</button>`;
             }
           }
           daysGrid.innerHTML = out;
@@ -2753,10 +2747,10 @@
             return `
               <button type="button" data-ctime="${t}" class="cal-w-slot w-full py-2.5 px-4 rounded-[8px] border text-sm font-semibold flex items-center justify-center gap-2.5 transition ${
                 active
-                  ? 'bg-[#141220] border-[#8B5CF6] text-white shadow-[0_0_20px_rgba(139,92,246,0.35)]'
-                  : 'bg-[#0B0A10] hover:bg-[#141220] border-white/[0.08] hover:border-white/25 text-white'
+                  ? 'bg-[#1C120D] border-[#D95130] text-white shadow-[0_0_20px_rgba(217,81,48,0.35)]'
+                  : 'bg-[#120C09] hover:bg-[#1C120D] border-white/[0.08] hover:border-white/25 text-white'
               }">
-                <span class="w-2 h-2 rounded-full bg-[#8B5CF6]"></span>
+                <span class="w-2 h-2 rounded-full bg-[#D95130]"></span>
                 <span>${t}</span>
               </button>
             `;
@@ -2800,14 +2794,14 @@
         document.getElementById('calWidget12hBtn').addEventListener('click', function() {
           use24h = false;
           selectedTime = '9:00am';
-          this.className = 'px-2.5 py-1 rounded-[6px] bg-[#8B5CF6] text-white font-semibold transition';
+          this.className = 'px-2.5 py-1 rounded-[6px] bg-[#D95130] text-white font-semibold transition';
           document.getElementById('calWidget24hBtn').className = 'px-2.5 py-1 rounded-[6px] text-mist-400 hover:text-white transition';
           renderCalSlots();
         });
         document.getElementById('calWidget24hBtn').addEventListener('click', function() {
           use24h = true;
           selectedTime = '09:00';
-          this.className = 'px-2.5 py-1 rounded-[6px] bg-[#8B5CF6] text-white font-semibold transition';
+          this.className = 'px-2.5 py-1 rounded-[6px] bg-[#D95130] text-white font-semibold transition';
           document.getElementById('calWidget12hBtn').className = 'px-2.5 py-1 rounded-[6px] text-mist-400 hover:text-white transition';
           renderCalSlots();
         });
@@ -2888,55 +2882,6 @@
           });
         }
 
-        // 4. Single Glowing Cursor Dot with Contextual Portfolio & Interactive Hover States
-        const dot = document.getElementById('cursorGlowDot');
-        if (!dot || reducedMotion) return;
-        if (window.matchMedia && window.matchMedia('(hover: none), (pointer: coarse)').matches) return;
-
-        let targetX = window.innerWidth / 2;
-        let targetY = window.innerHeight / 2;
-        let currX = targetX;
-        let currY = targetY;
-        let visible = false;
-
-        const portfolioSelector = '[data-player-id], #heroVslCenterOverlay, #csVideoContainer';
-        const interactiveSelector = 'a, button, input, select, textarea, [role="button"], .faq-toggle-btn';
-
-        window.addEventListener('mousemove', function(e) {
-          targetX = e.clientX;
-          targetY = e.clientY;
-          if (!visible) {
-            currX = targetX;
-            currY = targetY;
-            visible = true;
-            dot.style.opacity = '1';
-          }
-          const isPortfolio = Boolean(e.target && e.target.closest && e.target.closest(portfolioSelector));
-          const isInteractive = Boolean(!isPortfolio && e.target && e.target.closest && e.target.closest(interactiveSelector));
-          dot.classList.toggle('cursor-portfolio', isPortfolio);
-          dot.classList.toggle('cursor-hover', isInteractive);
-        }, { passive: true });
-
-        window.addEventListener('mousedown', function() {
-          dot.classList.add('cursor-down');
-        }, { passive: true });
-
-        window.addEventListener('mouseup', function() {
-          dot.classList.remove('cursor-down');
-        }, { passive: true });
-
-        document.addEventListener('mouseleave', function() {
-          visible = false;
-          dot.style.opacity = '0';
-        });
-
-        function animateDot() {
-          currX += (targetX - currX) * 0.34;
-          currY += (targetY - currY) * 0.34;
-          dot.style.transform = `translate3d(${currX.toFixed(2)}px, ${currY.toFixed(2)}px, 0)`;
-          requestAnimationFrame(animateDot);
-        }
-        requestAnimationFrame(animateDot);
       })();
     })();
   </script>
