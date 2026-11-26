@@ -891,11 +891,6 @@
             <span class="block mt-1">before you ever <span class="clipcut-text-grad">get on the call</span></span>
           </h1>
 
-          <!-- Subtitle -->
-          <p id="heroSubtitle" class="hero-stagger-3 mt-6 text-base sm:text-[18px] text-[#9E938E] max-w-2xl mx-auto leading-[1.6]">
-            I’m Alve Nabil, a content strategist for coaches, consultants, and founders who sell high-ticket — I find the message, build the system, and produce the video that turns authority into booked calls.
-          </p>
-
           <!-- ClipCut Dual Pill CTA Row ("Start a Project ↗" + "See Our Works") -->
           <div class="hero-stagger-4 mt-8 flex flex-wrap items-center justify-center gap-3.5 sm:gap-4">
             <a href="#lets-talk" class="btn-nebula hero-cta-amber inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full font-medium text-sm sm:text-base">
@@ -1134,9 +1129,6 @@
               Trusted by Experts<br />
               <span class="clipcut-text-grad">Who Sell on Trust</span>
             </h2>
-            <p class="mt-4 text-xs sm:text-sm text-mist-300 max-w-md mx-auto leading-relaxed">
-              Strategy and execution behind content that builds authority and starts sales conversations.
-            </p>
 
             <div class="mt-6">
               <a href="#lets-talk" class="btn-nebula inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-medium text-xs sm:text-sm text-white shadow-[0_0_32px_rgba(217,81,48,0.55)]">
@@ -1170,9 +1162,6 @@
             <span class="text-mist-200">Consultation Funnel System</span><br />
             <span class="clipcut-text-grad">Built for Lex Corporation.</span>
           </h2>
-          <p id="caseStudySub" class="mt-4 text-sm sm:text-base text-mist-400 max-w-2xl mx-auto">
-            By pairing bilingual authority positioning with high-retention short-form edits, we grew Mohammad in Poland from 1K to 34K followers and turned organic viewers into booked consultations.
-          </p>
         </div>
 
         <!-- Before / After iPhone Mockup Comparison (Exact Reference Layout) -->
@@ -1319,21 +1308,17 @@
             Strategy You Can See<br />
             <span class="clipcut-text-grad">Every Frame Is Built to Build Trust</span>
           </h2>
-          <p id="portfolioSubtitle" class="mt-4 text-sm sm:text-base text-mist-400">
-            Premium, restrained edits for experts who would rather be trusted than just noticed.
-          </p>
 
-          <!-- Interactive Filter Pills for the 6 Viral Reels -->
-          <div class="mt-6 flex flex-wrap items-center justify-center gap-2" id="portfolioFilterBar">
-            <button type="button" data-filter="all" class="portfolio-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-nebula-600 text-white transition">All 6 Showcases</button>
-            <button type="button" data-filter="retention" class="portfolio-filter-btn px-4 py-2 rounded-full text-xs font-medium btn-xtract-secondary transition">High-Retention Talking Head</button>
-            <button type="button" data-filter="motion" class="portfolio-filter-btn px-4 py-2 rounded-full text-xs font-medium btn-xtract-secondary transition">Motion Graphics &amp; UI</button>
-            <button type="button" data-filter="b2b" class="portfolio-filter-btn px-4 py-2 rounded-full text-xs font-medium btn-xtract-secondary transition">B2B Coaches &amp; Funnels</button>
+          <!-- Interactive 3-Category Filter Pills (Long-Form, Reels, E-Com Products) -->
+          <div class="mt-6 flex flex-wrap items-center justify-center gap-2.5" id="portfolioFilterBar">
+            <button type="button" data-filter="longform" class="portfolio-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-nebula-600 text-white transition">Long-Form</button>
+            <button type="button" data-filter="reels" class="portfolio-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium btn-xtract-secondary transition">Reels</button>
+            <button type="button" data-filter="ecom" class="portfolio-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium btn-xtract-secondary transition">E-Com Products</button>
           </div>
         </div>
 
-        <!-- 3x2 Grid of 6 Vertical (9:16) Videos -->
-        <div id="portfolioGrid" class="mt-8 grid grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-5">
+        <!-- 3x2 Super-Clean Portfolio Grid (6 Cards per Category, Zero Text) -->
+        <div id="portfolioGrid" class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           <!-- Populated by JS -->
         </div>
 
@@ -1893,42 +1878,58 @@
         { platform: 'fb', img: 'data:image/jpeg;base64,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', baseAngle: 79.81 }
       ];
 
-      // Visual Showcase Frames (Mixed with YouTube Video Reels: E-com Product, Talking Head, E-Com)
+      // Visual Showcase Frames (Clean Text-Free Video Preview Cards)
       const showcaseFrames = [
         {
-          label: 'E-com Product',
-          sub: 'E-Com Product Reel',
-          meta: '@nabilution • YouTube',
           youtubeId: 'PjIhdUzOg60',
-          youtubeUrl: 'https://youtu.be/PjIhdUzOg60',
           thumbnailUrl: 'https://i.ytimg.com/vi/PjIhdUzOg60/hqdefault.jpg',
           accent: '#D95130'
         },
-        { label: '3-Second Hook Architecture', sub: 'Retention Opening System', meta: '75%+ Avg. Hold Rate', accent: '#E88843' },
-        { label: 'Custom UI Proof Callouts', sub: '3D Motion & Overlays', meta: 'Restrained Authority UI', accent: '#ED795C' },
-        { label: '4K Executive Color Grade', sub: 'Studio Visual Identity', meta: 'Cinema-Grade Look', accent: '#D4482C' },
         {
-          label: 'Talking Head',
-          sub: 'Founder Talking Head',
-          meta: '@nabilution • YouTube',
+          youtubeId: 'uv-UynNRN1M',
+          thumbnailUrl: 'https://i.ytimg.com/vi/uv-UynNRN1M/hqdefault.jpg',
+          accent: '#E88843'
+        },
+        {
+          youtubeId: 'aCfwzUsSiQ0',
+          thumbnailUrl: 'https://i.ytimg.com/vi/aCfwzUsSiQ0/hqdefault.jpg',
+          accent: '#ED795C'
+        },
+        {
+          youtubeId: 'VKUCvrAdgCQ',
+          thumbnailUrl: 'https://i.ytimg.com/vi/VKUCvrAdgCQ/hqdefault.jpg',
+          accent: '#D4482C'
+        },
+        {
           youtubeId: 'UKm5AiRmcOE',
-          youtubeUrl: 'https://youtu.be/UKm5AiRmcOE',
           thumbnailUrl: 'https://i.ytimg.com/vi/UKm5AiRmcOE/hqdefault.jpg',
           accent: '#D95130'
         },
-        { label: 'Retention Pacing & Cuts', sub: 'Editorial Rhythm', meta: 'Zero Filler Frames', accent: '#A84027' },
         {
-          label: 'E-Com',
-          sub: 'E-Com Motion & Grade',
-          meta: '@nabilution • YouTube',
+          youtubeId: 'tsfGoDuyhV0',
+          thumbnailUrl: 'https://i.ytimg.com/vi/tsfGoDuyhV0/hqdefault.jpg',
+          accent: '#A84027'
+        },
+        {
           youtubeId: 'PwKfXWBL6_U',
-          youtubeUrl: 'https://youtu.be/PwKfXWBL6_U',
           thumbnailUrl: 'https://i.ytimg.com/vi/PwKfXWBL6_U/hqdefault.jpg',
           accent: '#E88843'
         },
-        { label: 'Authority B-Roll Sequencing', sub: 'Visual Storytelling', meta: 'Context-First Framing', accent: '#D95130' },
-        { label: 'Editorial Caption Hierarchy', sub: 'Silent-Scroll Readability', meta: 'Custom Typography', accent: '#D4482C' },
-        { label: 'Broadcast Audio & Mastering', sub: 'Studio Sound Design', meta: 'Crisp Vocal Presence', accent: '#ED795C' }
+        {
+          youtubeId: 'PjIhdUzOg60',
+          thumbnailUrl: '/public/assets/ig_reel_DcF-5gTA5lM.jpg',
+          accent: '#D95130'
+        },
+        {
+          youtubeId: 'UKm5AiRmcOE',
+          thumbnailUrl: '/public/assets/ig_reel_DZDbZOoyTf6.jpg',
+          accent: '#D4482C'
+        },
+        {
+          youtubeId: 'PwKfXWBL6_U',
+          thumbnailUrl: '/public/assets/fb_reel_1F1KtgE1Yv.jpg',
+          accent: '#ED795C'
+        }
       ];
 
       // 3 Credibility Testimonials Data
@@ -1980,91 +1981,138 @@
         }
       ];
 
-      // 6 Selected Work Portfolio Videos (All 6 Wired to Real Playable YouTube Videos & Thumbnails)
+      // Selected Work Portfolio Videos: 3 Categories (longform, reels, ecom) × 6 Clean Cards Each
       const portfolioVideosData = [
+        // 1. LONG-FORM (6 Horizontal 16:9 Cards)
         {
-          id: 'port-1',
+          id: 'lf-1',
+          category: 'longform',
           youtubeId: 'uv-UynNRN1M',
-          youtubeUrl: 'https://youtu.be/uv-UynNRN1M',
           thumbnailUrl: 'https://i.ytimg.com/vi/uv-UynNRN1M/hqdefault.jpg',
-          title: '🇵🇱 Business in Poland: Tax Compliance, AI Monitoring & Unpaid ZUS — What Should You Know?',
-          client: '@Mohammad_in_Poland • Mohammad in Poland',
-          category: 'retention',
-          metrics: 'Talking Head · B2B',
-          strategyProof: 'High-retention talking head breakdown turning complex Polish tax compliance, AI monitoring, and ZUS rules into clear buyer authority for business owners.',
-          duration: 45,
-          hookText: 'TAX COMPLIANCE & AI MONITORING IN POLAND',
-          accent: '#D95130'
+          title: 'Long-Form Showcase 1'
         },
         {
-          id: 'port-2',
+          id: 'lf-2',
+          category: 'longform',
           youtubeId: 'UKm5AiRmcOE',
-          youtubeUrl: 'https://youtu.be/UKm5AiRmcOE',
           thumbnailUrl: 'https://i.ytimg.com/vi/UKm5AiRmcOE/hqdefault.jpg',
-          title: 'Founder Talking Head — High-Retention Authority Pacing & Hook Structure',
-          client: '@nabilution • Alve Nabil',
-          category: 'retention',
-          metrics: 'Founder Talking Head',
-          strategyProof: 'Clean executive framing, 3-second hook hold, and structured visual callouts engineered to keep high-ticket buyers engaged.',
-          duration: 52,
-          hookText: 'FOUNDER TALKING HEAD SYSTEM',
-          accent: '#E88843'
+          title: 'Long-Form Showcase 2'
         },
         {
-          id: 'port-3',
+          id: 'lf-3',
+          category: 'longform',
           youtubeId: 'aCfwzUsSiQ0',
-          youtubeUrl: 'https://youtu.be/aCfwzUsSiQ0',
           thumbnailUrl: 'https://i.ytimg.com/vi/aCfwzUsSiQ0/hqdefault.jpg',
-          title: 'My 360° Local SEO Process: SEO, AEO & GEO | Muhaiminul Islam Sajib',
-          client: '@MuhaiminulIslamSajib • Muhaiminul Islam Sajib',
-          category: 'b2b',
-          metrics: 'B2B Search Funnel',
-          strategyProof: 'Structured 360° Local SEO, AEO, and GEO methodology breakdown designed to demonstrate B2B search authority and convert inbound agency prospects.',
-          duration: 38,
-          hookText: '360° LOCAL SEO PROCESS: SEO, AEO & GEO',
-          accent: '#D4482C'
+          title: 'Long-Form Showcase 3'
         },
         {
-          id: 'port-4',
-          youtubeId: 'PjIhdUzOg60',
-          youtubeUrl: 'https://youtu.be/PjIhdUzOg60',
-          thumbnailUrl: 'https://i.ytimg.com/vi/PjIhdUzOg60/hqdefault.jpg',
-          title: 'E-Com Product Showcase — Dynamic Motion Callouts & Visual Storytelling',
-          client: '@nabilution • Product Reel',
-          category: 'motion',
-          metrics: 'Motion & Product Grade',
-          strategyProof: 'Precision speed ramps, product callouts, and studio color grading built to showcase product value in under 30 seconds.',
-          duration: 41,
-          hookText: 'E-COM PRODUCT MOTION SHOWCASE',
-          accent: '#D95130'
-        },
-        {
-          id: 'port-5',
+          id: 'lf-4',
+          category: 'longform',
           youtubeId: 'VKUCvrAdgCQ',
-          youtubeUrl: 'https://youtu.be/VKUCvrAdgCQ',
           thumbnailUrl: 'https://i.ytimg.com/vi/VKUCvrAdgCQ/hqdefault.jpg',
-          title: 'Social Security Breakeven Age: Should You Claim at 62, 67, or 70?',
-          client: '@MedicareonVideo • Medicare Specialist',
-          category: 'retention',
-          metrics: 'Advisor Breakdown',
-          strategyProof: 'Structured retirement & Social Security breakeven analysis paced with clear visual comparisons that answer high-intent client questions before the consultation.',
-          duration: 49,
-          hookText: 'CLAIM AT 62, 67, OR 70? BREAKEVEN MATH',
-          accent: '#ED795C'
+          title: 'Long-Form Showcase 4'
         },
         {
-          id: 'port-6',
+          id: 'lf-5',
+          category: 'longform',
+          youtubeId: 'tsfGoDuyhV0',
+          thumbnailUrl: 'https://i.ytimg.com/vi/tsfGoDuyhV0/hqdefault.jpg',
+          title: 'Long-Form Showcase 5'
+        },
+        {
+          id: 'lf-6',
+          category: 'longform',
+          youtubeId: 'PjIhdUzOg60',
+          thumbnailUrl: 'https://i.ytimg.com/vi/PjIhdUzOg60/hqdefault.jpg',
+          title: 'Long-Form Showcase 6'
+        },
+
+        // 2. REELS (6 Vertical 9:16 Cards)
+        {
+          id: 'reel-1',
+          category: 'reels',
+          videoSrc: '/public/assets/ig_reel_DcF-5gTA5lM.mp4',
+          thumbnailUrl: '/public/assets/ig_reel_DcF-5gTA5lM.jpg',
+          title: 'Reel Showcase 1'
+        },
+        {
+          id: 'reel-2',
+          category: 'reels',
+          videoSrc: '/public/assets/ig_reel_DZDbZOoyTf6.mp4',
+          thumbnailUrl: '/public/assets/ig_reel_DZDbZOoyTf6.jpg',
+          title: 'Reel Showcase 2'
+        },
+        {
+          id: 'reel-3',
+          category: 'reels',
+          videoSrc: '/public/assets/fb_reel_1F1KtgE1Yv.mp4',
+          thumbnailUrl: '/public/assets/fb_reel_1F1KtgE1Yv.jpg',
+          title: 'Reel Showcase 3'
+        },
+        {
+          id: 'reel-4',
+          category: 'reels',
+          youtubeId: 'UKm5AiRmcOE',
+          thumbnailUrl: 'https://i.ytimg.com/vi/UKm5AiRmcOE/hqdefault.jpg',
+          title: 'Reel Showcase 4'
+        },
+        {
+          id: 'reel-5',
+          category: 'reels',
+          youtubeId: 'uv-UynNRN1M',
+          thumbnailUrl: 'https://i.ytimg.com/vi/uv-UynNRN1M/hqdefault.jpg',
+          title: 'Reel Showcase 5'
+        },
+        {
+          id: 'reel-6',
+          category: 'reels',
+          youtubeId: 'VKUCvrAdgCQ',
+          thumbnailUrl: 'https://i.ytimg.com/vi/VKUCvrAdgCQ/hqdefault.jpg',
+          title: 'Reel Showcase 6'
+        },
+
+        // 3. E-COM PRODUCTS (6 Horizontal 16:9 Cards)
+        {
+          id: 'ecom-1',
+          category: 'ecom',
+          youtubeId: 'PjIhdUzOg60',
+          thumbnailUrl: 'https://i.ytimg.com/vi/PjIhdUzOg60/hqdefault.jpg',
+          title: 'E-Com Product Showcase 1'
+        },
+        {
+          id: 'ecom-2',
+          category: 'ecom',
           youtubeId: 'PwKfXWBL6_U',
-          youtubeUrl: 'https://youtu.be/PwKfXWBL6_U',
           thumbnailUrl: 'https://i.ytimg.com/vi/PwKfXWBL6_U/hqdefault.jpg',
-          title: 'E-Com Authority Edit — High-Contrast Visual Hook & Conversion Pacing',
-          client: '@nabilution • Brand System',
-          category: 'motion',
-          metrics: 'E-Com Motion System',
-          strategyProof: 'High-contrast motion graphics, sound design, and conversion-focused pacing engineered to turn cold viewers into warm buyers.',
-          duration: 58,
-          hookText: 'HIGH-RETENTION E-COM EDIT',
-          accent: '#A84027'
+          title: 'E-Com Product Showcase 2'
+        },
+        {
+          id: 'ecom-3',
+          category: 'ecom',
+          youtubeId: 'UKm5AiRmcOE',
+          thumbnailUrl: 'https://i.ytimg.com/vi/UKm5AiRmcOE/hqdefault.jpg',
+          title: 'E-Com Product Showcase 3'
+        },
+        {
+          id: 'ecom-4',
+          category: 'ecom',
+          youtubeId: 'tsfGoDuyhV0',
+          thumbnailUrl: 'https://i.ytimg.com/vi/tsfGoDuyhV0/hqdefault.jpg',
+          title: 'E-Com Product Showcase 4'
+        },
+        {
+          id: 'ecom-5',
+          category: 'ecom',
+          youtubeId: 'aCfwzUsSiQ0',
+          thumbnailUrl: 'https://i.ytimg.com/vi/aCfwzUsSiQ0/hqdefault.jpg',
+          title: 'E-Com Product Showcase 5'
+        },
+        {
+          id: 'ecom-6',
+          category: 'ecom',
+          youtubeId: 'VKUCvrAdgCQ',
+          thumbnailUrl: 'https://i.ytimg.com/vi/VKUCvrAdgCQ/hqdefault.jpg',
+          title: 'E-Com Product Showcase 6'
         }
       ];
 
@@ -2133,7 +2181,7 @@
 
 
 
-      // Render About Us Dual Marquees
+      // Render About Us Dual Marquees (Clean Text-Free Cards)
       function renderAboutMarquees() {
         const row1 = document.getElementById('aboutMarqueeRow1');
         const row2 = document.getElementById('aboutMarqueeRow2');
@@ -2141,28 +2189,14 @@
         const buildRow = (items) => items.map((item) => {
           const isYt = Boolean(item.youtubeId);
           return `
-          <div ${isYt ? `data-youtube-id="${item.youtubeId}" data-youtube-title="${item.label.replace(/"/g, '&quot;')}"` : ''} class="${isYt ? 'w-56 sm:w-64 cursor-pointer' : 'w-48 sm:w-56'} h-36 shrink-0 xtract-bento-card p-3.5 flex flex-col justify-between relative overflow-hidden group hover:border-nebula-500/50 transition">
-            ${isYt ? `
-              <img src="${item.thumbnailUrl}" alt="${item.label}" loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-55 group-hover:opacity-75 group-hover:scale-105 transition duration-500 pointer-events-none" />
-              <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950/95 via-obsidian-950/45 to-obsidian-950/80 pointer-events-none"></div>
+          <div ${isYt ? `data-youtube-id="${item.youtubeId}" data-youtube-title="Video Showcase"` : ''} class="w-56 sm:w-64 h-36 shrink-0 xtract-bento-card flex items-center justify-center relative overflow-hidden group hover:border-nebula-500/50 transition cursor-pointer">
+            ${item.thumbnailUrl ? `
+              <img src="${item.thumbnailUrl}" alt="Showcase preview" loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-95 group-hover:scale-105 transition duration-500 pointer-events-none" />
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950/60 via-transparent to-obsidian-950/30 pointer-events-none"></div>
             ` : `
               <div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full blur-xl opacity-30 group-hover:opacity-60 transition" style="background:${item.accent}"></div>
             `}
-            <div class="flex items-center justify-between text-[10px] text-mist-400 relative z-10">
-              <span class="uppercase tracking-wider font-semibold ${isYt ? 'text-white drop-shadow' : 'text-mist-300'}">${item.sub}</span>
-              ${isYt ? `
-                <a href="${item.youtubeUrl}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();" class="px-1.5 py-0.5 rounded bg-nebula-500/30 border border-nebula-400/40 text-[9px] font-semibold text-nebula-200 hover:bg-nebula-500/50 transition">YouTube ↗</a>
-              ` : `
-                <span class="w-2 h-2 rounded-full" style="background:${item.accent}"></span>
-              `}
-            </div>
-            <div class="relative z-10 flex items-center gap-2.5 mt-auto">
-              <div class="w-8 h-8 rounded-lg ${isYt ? 'bg-nebula-500/80 border-nebula-300/60 shadow-nebula-sm group-hover:scale-105' : 'bg-white/10 border-white/15'} border flex items-center justify-center text-white text-xs transition">▶</div>
-              <div class="min-w-0">
-                <div class="text-xs font-bold text-white truncate">${item.label}</div>
-                <div class="text-[10px] ${isYt ? 'text-nebula-300 font-medium' : 'text-mist-400'} truncate">${item.meta || '4K 60fps Grade'}</div>
-              </div>
-            </div>
+            <div class="player-overlay relative z-10 w-10 h-10 rounded-xl bg-white/15 backdrop-blur-md border border-white/25 flex items-center justify-center text-white text-xs shadow-lg group-hover:scale-110 group-hover:bg-white/25 transition duration-300 pointer-events-none">▶</div>
           </div>
           `;
         }).join('');
@@ -2334,54 +2368,42 @@
         `).join('');
       }
 
-      // Render 6 Vertical Portfolio Videos
-      function renderPortfolio(filter = 'all') {
+      // Render 6 Super-Clean Text-Free Portfolio Cards per Category (Long-Form 16:9, Reels 9:16, E-Com Products 16:9)
+      function renderPortfolio(filter = 'longform') {
         const grid = document.getElementById('portfolioGrid');
-        const filtered = filter === 'all' ? portfolioVideosData : portfolioVideosData.filter(v => v.category === filter);
+        const isReels = filter === 'reels';
+        grid.className = isReels
+          ? 'mt-8 grid grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-5'
+          : 'mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5';
+
+        const filtered = portfolioVideosData.filter(v => v.category === filter);
+        const aspectClass = isReels ? 'aspect-[9/16]' : 'aspect-video';
+
         grid.innerHTML = filtered.map((v, idx) => {
-          const isYoutube = Boolean(v.youtubeId);
-          const safeTitleAttr = (v.title || '').replace(/"/g, '&quot;');
-          const playerMarkup = isYoutube
-            ? `
-            <div class="relative aspect-[4/3] w-full rounded-xl bg-[#090401] border border-white/[0.08] overflow-hidden cursor-pointer mx-auto" data-youtube-id="${v.youtubeId}" data-youtube-title="${safeTitleAttr}">
-              <div class="media-stage-zoom absolute inset-0" style="background: radial-gradient(circle at 50% 42%, ${v.accent}52, rgba(18,12,9,0.22) 56%, transparent 78%);"></div>
-              <img src="${v.thumbnailUrl}" alt="${safeTitleAttr}" referrerpolicy="no-referrer" onerror="this.style.display='none'" class="media-stage-zoom absolute inset-0 w-full h-full object-cover opacity-85 group-hover:opacity-100 transition-all duration-300" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-black/35 pointer-events-none"></div>
-
+          const safeTitleAttr = (v.title || 'Selected Work Video').replace(/"/g, '&quot;');
+          if (v.videoSrc) {
+            return `
+            <div class="interactive-media-card reveal-on-scroll is-inview relative ${aspectClass} w-full rounded-[18px] sm:rounded-[20px] bg-[#090401] border border-white/[0.12] hover:border-nebula-500/50 overflow-hidden cursor-pointer group" data-player-id="${v.id}" data-duration="60" style="--stagger:${idx}">
+              <video class="testimonial-native-video media-stage-zoom absolute inset-0 w-full h-full object-cover" src="${v.videoSrc}" poster="${v.thumbnailUrl}" playsinline preload="metadata" loop></video>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/20 pointer-events-none"></div>
               <div class="player-overlay absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/5 transition pointer-events-none z-10">
-                <div class="play-indicator-box w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#D95130]/90 backdrop-blur-md border border-white/30 flex items-center justify-center shadow-[0_0_28px_rgba(217,81,48,0.5)]">
-                  <svg class="w-4 h-4 sm:w-5 sm:h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                </div>
-              </div>
-            </div>`
-            : `
-            <div class="relative aspect-[4/3] w-full rounded-xl bg-[#090401] border border-white/[0.08] overflow-hidden cursor-pointer mx-auto" data-player-id="${v.id}" data-duration="${v.duration}">
-              <div class="media-stage-zoom absolute inset-0" style="background: radial-gradient(circle at 50% 42%, ${v.accent}52, rgba(18,12,9,0.22) 56%, transparent 78%);"></div>
-              <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 32px 32px;"></div>
-
-              <div class="player-overlay absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/5 transition pointer-events-none z-10">
-                <div class="play-indicator-box w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/15 backdrop-blur-md border border-white/25 flex items-center justify-center shadow-[0_0_24px_rgba(217,81,48,0.3)]">
+                <div class="play-indicator-box w-11 h-11 sm:w-12 sm:h-12 rounded-[14px] bg-white/15 backdrop-blur-md border border-white/25 flex items-center justify-center shadow-[0_8px_24px_rgba(0,0,0,0.45)]">
                   <svg class="w-4 h-4 sm:w-5 sm:h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
               </div>
             </div>`;
+          }
 
           return `
-          <div class="interactive-media-card reveal-on-scroll is-inview xtract-bento-card p-2.5 sm:p-3.5 flex flex-col justify-between hover:border-nebula-500/45 group" style="--stagger:${idx}">
-            ${playerMarkup}
-
-            <!-- Hook Badge, Title, Metrics & Strategy Proof Cleanly Below the 4:3 Player -->
-            <div class="mt-2.5 pt-2 border-t border-white/10 px-0.5 text-left space-y-1">
-              <div class="flex flex-wrap items-center justify-between gap-1">
-                <span class="inline-block px-2 py-0.5 rounded bg-nebula-500/15 border border-nebula-400/35 text-nebula-200 font-semibold text-[9px] sm:text-[10px] tracking-wide uppercase truncate max-w-full">
-                  ${v.hookText}
-                </span>
-                <span class="text-[10px] text-nebula-300 font-mono">${v.metrics}</span>
+          <div class="interactive-media-card reveal-on-scroll is-inview relative ${aspectClass} w-full rounded-[18px] sm:rounded-[20px] bg-[#090401] border border-white/[0.12] hover:border-nebula-500/50 overflow-hidden cursor-pointer group" data-youtube-id="${v.youtubeId}" data-youtube-title="${safeTitleAttr}" style="--stagger:${idx}">
+            <img src="${v.thumbnailUrl}" alt="${safeTitleAttr}" referrerpolicy="no-referrer" onerror="this.style.display='none'" class="media-stage-zoom absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-300" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/20 pointer-events-none"></div>
+            <div class="player-overlay absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/5 transition pointer-events-none z-10">
+              <div class="play-indicator-box w-11 h-11 sm:w-12 sm:h-12 rounded-[14px] bg-white/15 backdrop-blur-md border border-white/25 flex items-center justify-center shadow-[0_8px_24px_rgba(0,0,0,0.45)]">
+                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
               </div>
-              <div class="text-xs sm:text-sm font-medium text-white leading-snug group-hover:text-nebula-200 transition-colors">${v.title}</div>
             </div>
-          </div>
-          `;
+          </div>`;
         }).join('');
       }
 
@@ -2487,15 +2509,15 @@
         }
       });
 
-      // Portfolio Filter Buttons
+      // Portfolio Filter Buttons (Long-Form, Reels, E-Com Products)
       document.getElementById('portfolioFilterBar').addEventListener('click', function(e) {
         const btn = e.target.closest('.portfolio-filter-btn');
         if (!btn) return;
         const filter = btn.getAttribute('data-filter');
         document.querySelectorAll('.portfolio-filter-btn').forEach(b => {
-          b.className = 'portfolio-filter-btn px-4 py-2 rounded-full text-xs font-medium btn-xtract-secondary transition';
+          b.className = 'portfolio-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium btn-xtract-secondary transition';
         });
-        btn.className = 'portfolio-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-nebula-600 text-white transition';
+        btn.className = 'portfolio-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-nebula-600 text-white transition';
         renderPortfolio(filter);
       });
 
@@ -2633,7 +2655,7 @@
       if (wheelAnimId) cancelAnimationFrame(wheelAnimId);
       wheelAnimId = requestAnimationFrame(stepArcWheel);
       renderTestimonials();
-      renderPortfolio('all');
+      renderPortfolio('longform');
       renderFaqAccordion();
 
       // Native Cal.com Scheduler Logic (Matches Screenshot 2026-11-16 220152.png & Links to cal.com/alve-nabil-fmw83h/30min)
